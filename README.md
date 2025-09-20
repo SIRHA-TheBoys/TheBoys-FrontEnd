@@ -51,4 +51,4 @@ A continuación se presentan los mockups de las diferentes vistas del sistema.
 
 1. Clonar el repositorio:
    ```bash
-   git clone <url-del-repo>
+   git clone https://github.com/tulio3101/TheBoys-FrontEnd.git
