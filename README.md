@@ -33,19 +33,16 @@ A continuación se presentan los mockups de las diferentes vistas del sistema.
 ---
 
 ### 📋 Vista de Gestión  
-*(Agrega aquí la imagen del mockup de gestión)*  
 ![Mockup Vista de Gestión](docs/mockups/vista_gestion.png)
 
 ---
 
 ### ⚙️ Vista de Configuración  
-*(Agrega aquí la imagen del mockup de configuración)*  
 ![Mockup Vista de Configuración](docs/mockups/vista_configuracion.png)
 
 ---
 
 ### 📊 Vista de Reportes  
-*(Agrega aquí la imagen del mockup de reportes)*  
 ![Mockup Vista de Reportes](docs/mockups/vista_reportes.png)
 
 ---
