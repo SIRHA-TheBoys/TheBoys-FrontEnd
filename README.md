@@ -30,22 +30,22 @@ A continuación se presentan los mockups de las diferentes vistas del sistema.
 
 🔗 https://www.figma.com/design/5FjLUpjz4JK90ODnYmOWz6/SIRHA?node-id=0-1&t=5uAXr3i0gTXRMYzx-1
  
-![Mockup Vista de Usuarios](docs/mockups/vista_usuarios.png)
+![Mockup Vista de Usuarios](The-Boys-SIRHA/docs/mockups/vista_usuarios.png)
 
 ---
 
 ### 📋 Vista de Gestión  
-![Mockup Vista de Gestión](docs/mockups/vista_gestion.png)
+![Mockup Vista de Gestión](The-Boys-SIRHA/docs/mockups/vista_gestion.png)
+
 
 ---
 
 ### ⚙️ Vista de Configuración  
-![Mockup Vista de Configuración](docs/mockups/vista_configuracion.png)
-
+![Mockup Vista de Configuración](The-Boys-SIRHA/docs/mockups/image.png)
 ---
 
 ### 📊 Vista de Reportes  
-![Mockup Vista de Reportes](docs/mockups/vista_reportes.png)
+![Mockup Vista de Reportes](The-Boys-SIRHA/docs/mockups/vista_reportes.png)
 
 ---
 
