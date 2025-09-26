@@ -19,7 +19,9 @@ Este proyecto corresponde al desarrollo de la interfaz gráfica del sistema **SI
 🔗 [The Boys Frontend](#)  
 
 ---
-
+## 🌲Ramificacion y Estrategia de Versionamiento de ramas
+- Se realiza la respectiva ramificacion creando las ramas `develop` y `feature` para desarrollar las nuevas funcionalidades de la aplicacion. Para los commits manejamos el estandar `feat/modulo: Accion Realizada - Nombre Quien Lo Hizo` para que se entienda con claridad lo elaborado.
+---
 ## 🎨 Mockups del proyecto
 
 A continuación se presentan los mockups de las diferentes vistas del sistema.  
