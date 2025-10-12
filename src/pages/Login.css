@@ -1,0 +1,180 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Contenedor de toda la página */
+.login-page {
+  height: 100vh;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Barra superior blanca === */
+.top-bar {
+  background-color: #fff;
+  height: 60px;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.top-bar img {
+  height: 40px;
+}
+
+/* Contenedor principal */
+.login-container {
+  flex: 1;
+  display: flex;
+  width: 100%; 
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Lado izquierdo (imagen) */
+.login-image {
+  flex: 1;
+  height: 100%;
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Lado derecho (formulario) */
+.login-form-container {
+  flex: 1;
+  background-color: #f9fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4vw;
+  box-sizing: border-box;
+}
+
+/* Logo SIRHA */
+.sirha-logo img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* Título */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0c0c0c;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Subtítulo */
+.subtitle {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+/* Formulario */
+.login-form {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  color: #000;
+}
+
+.login-form input:focus {
+  border-color: #002b8a;
+  outline: none;
+}
+
+/* Forgot password */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 22px;
+}
+
+.forgot-password a {
+  font-size: 13px;
+  color: #002b8a;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Botón */
+button {
+  background-color: #001d67;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #000f45;
+}
+
+/* Logo ECI */
+.eci-logo {
+  margin-top: 45px;
+}
+
+.eci-logo img {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image {
+    height: 40vh;
+  }
+
+  .login-form-container {
+    height: 60vh;
+    padding: 30px;
+  }
+}
