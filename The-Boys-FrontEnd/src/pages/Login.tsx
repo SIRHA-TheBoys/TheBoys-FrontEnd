@@ -1,10 +1,12 @@
 import "./Login.css";
-
+import { useNavigate } from 'react-router-dom'
 import campus from "../assets/eci-campus.png";
 import logoSirha from "../assets/logo-sirha.jpg";
 import logoEci from "../assets/logo-eci.png";
 
 function Login() {
+  const navigate = useNavigate(); //Falta implementar las demas pantallas para usarlo...
+
   return (
     <div className="login-page">
       {/* Barra superior */}
