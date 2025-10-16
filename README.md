@@ -14,15 +14,9 @@ Este proyecto corresponde al desarrollo de la interfaz gráfica del sistema **SI
 
 ---
 
-## 📂 Repositorio
-
-🔗 [The Boys Frontend](#)
-
----
-
 ## 🌲Ramificacion y Estrategia de Versionamiento de ramas
 
-- Se realiza la respectiva ramificacion creando las ramas `develop` y `feature` para desarrollar las nuevas funcionalidades de la aplicacion. Para los commits manejamos el estandar `feat/modulo: Accion Realizada - Nombre Quien Lo Hizo` para que se entienda con claridad lo elaborado.
+- Se realiza la respectiva ramificacion creando las ramas `develop` y `feature` para desarrollar las nuevas funcionalidades de la aplicacion. Para los commits manejamos el estandar `feat/modulo: Accion Realizada` para que se entienda con claridad lo elaborado.
 
 ---
 
@@ -58,5 +52,17 @@ A continuación se presentan los mockups de las diferentes vistas del sistema.
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tulio3101/TheBoys-FrontEnd.git
+   git clone https://github.com/SIRHA-TheBoys/TheBoys-FrontEnd
+   ```
+2. Acceder al directorio del proyecto
+   ```bash
+   cd SIRHA-TheBoys/TheBoys-FrontEnd
+   ```
+3. Instalar todas las dependencias
+   ```bash
+   npm install
+   ```
+4. Iniciar el proyecto
+   ```bash
+   npm run dev
    ```

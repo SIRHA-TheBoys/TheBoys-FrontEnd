@@ -1,3 +1,9 @@
+import TopBar from "../../components/TopBar";
+
 export default function Schedule() {
-  return <h1>Hola</h1>;
+  return (
+    <div>
+      <TopBar />
+    </div>
+  );
 }

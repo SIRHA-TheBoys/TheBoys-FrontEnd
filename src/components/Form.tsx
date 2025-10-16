@@ -2,9 +2,7 @@ import logoSirha from "../assets/logo-sirha.jpg";
 import logoEci from "../assets/logo-eci.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { User } from "../types/user";
 
-type user = {};
 
 export default function Form() {
   const [email, setEmail] = useState("");
