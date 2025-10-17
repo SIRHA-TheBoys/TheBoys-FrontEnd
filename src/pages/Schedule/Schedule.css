@@ -1,0 +1,18 @@
+.schedule  {
+  align-items: center;
+  display: flex;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+.schedule_title {
+  font-family: 'Spline Sans', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.select_semester {
+  margin-left: 200px;
+  margin-top: 5px;
+}
