@@ -1,7 +1,7 @@
 import "./Login.css";
 import campus from "../../assets/eci-campus.png";
 import TopBar from "../../components/TopBar";
-import Form from "../../components/Form";
+import Form from "../../components/Form/Form";
 
 function Login() {
   return (

@@ -1,0 +1,8 @@
+.home {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    padding: 1.5rem;
+    display:grid;
+    grid-template-columns: 1fr 350px;
+    gap: 1.5rem;
+}

@@ -1,5 +1,5 @@
-import logoSirha from "../assets/logo-sirha.jpg";
-import logoEci from "../assets/logo-eci.png";
+import logoSirha from "../../assets/logo-sirha.jpg";
+import logoEci from "../../assets/logo-eci.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 export default function Form() {
@@ -9,6 +9,8 @@ export default function Form() {
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+
     if (!email || !password) {
       alert("Plese complete all fields");
       setEmail("");
@@ -19,7 +21,7 @@ export default function Form() {
     try {
       const response = await fetch("http://localhost:8080/auth/login", {
         method: "POST",
-        headers: { "Content-Type:": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
 
@@ -61,9 +63,7 @@ export default function Form() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" onClick={handleLogin}>
-          Sign in
-        </button>
+        <button type="submit">Sign in</button>
       </form>
       <div className="eci-logo">
         <img src={logoEci} alt="Escuela Colombiana de Ingeniería" />

@@ -1,11 +1,12 @@
 import TopBar from "../../components/TopBar";
-import MenuOptions from "../../components/MenuOptions";
-import Notifications from "../../components/Notifications";
+import MenuOptions from "../../components/MenuOptions/MenuOptions";
+import Notifications from "../../components/Notifications/Notifications";
+import "./Home.css";
 export default function Home() {
   return (
     <div>
       <TopBar />
-      <div className="min-h-screen bg-gray-100 p-6 grid grid-cols-[1fr_350px] gap-6">
+      <div className="home">
         <MenuOptions />
         <Notifications />
       </div>
