@@ -18,9 +18,9 @@ Este proyecto corresponde al desarrollo de la interfaz gráfica del sistema **SI
 
 - Para mantener un control claro del desarrollo, seguimos una estructura de ramas basada en Git Flow:
 
-    - `main`: Contiene el código estable y listo para producción.
-    - `develop`: Rama principal de desarrollo.
-    - `feature/<funcionalidadRealizada>`: Se crea a partir de develop para implementar una nueva característica o mejora.
+  - `main`: Contiene el código estable y listo para producción.
+  - `develop`: Rama principal de desarrollo.
+  - `feature/<funcionalidadRealizada>`: Se crea a partir de develop para implementar una nueva característica o mejora.
 
 ---
 
