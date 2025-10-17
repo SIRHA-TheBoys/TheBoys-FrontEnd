@@ -16,7 +16,11 @@ Este proyecto corresponde al desarrollo de la interfaz gráfica del sistema **SI
 
 ## 🌲Ramificacion y Estrategia de Versionamiento de ramas
 
-- Se realiza la respectiva ramificacion creando las ramas `develop` y `feature` para desarrollar las nuevas funcionalidades de la aplicacion. Para los commits manejamos el estandar `feat/modulo: Accion Realizada` para que se entienda con claridad lo elaborado.
+- Para mantener un control claro del desarrollo, seguimos una estructura de ramas basada en Git Flow:
+
+  - `main`: Contiene el código estable y listo para producción.
+  - `develop`: Rama principal de desarrollo.
+  - `feature/<funcionalidadRealizada>`: Se crea a partir de develop para implementar una nueva característica o mejora.
 
 ---
 
@@ -28,25 +32,33 @@ A continuación se presentan los mockups de las diferentes vistas del sistema.
 
 🔗 https://www.figma.com/design/5FjLUpjz4JK90ODnYmOWz6/SIRHA?node-id=0-1&t=5uAXr3i0gTXRMYzx-1
 
-![Mockup Vista de Usuarios](The-Boys-SIRHA/docs/mockups/vista_usuarios.png)
+![Mockup Vista de Usuarios](/docs/mockups/vista_usuarios.png)
 
 ---
 
 ### 📋 Vista de Gestión
 
-![Mockup Vista de Gestión](The-Boys-SIRHA/docs/mockups/vista_gestion.png)
+![Mockup Vista de Gestión](/docs/mockups/vista_gestion.png)
 
 ---
 
 ### ⚙️ Vista de Configuración
 
-## ![Mockup Vista de Configuración](The-Boys-SIRHA/docs/mockups/image.png)
+## ![Mockup Vista de Configuración](/docs/mockups/image.png)
 
 ### 📊 Vista de Reportes
 
-![Mockup Vista de Reportes](The-Boys-SIRHA/docs/mockups/vista_reportes.png)
+![Mockup Vista de Reportes](/docs/mockups/vista_reportes.png)
 
 ---
+### Diagramas de flujo de pantallas
+Para realizar diagramas de flujo optimos a pesar de que nuestras pantallas no sean tan diferentes se decidio dividirlo en dos.
+La primera que va a remarcar el flujo de un administrador el cual es el que va a tener mas tareas.  En este diagrama lo que buscamos mostrar
+es una muestra de como va a ser nuestro front y como van a interactuar las pantallas planeadas entre si.
+![Diagrama de flujo admin/decano](/docs/Diagramas/Diagramaciondepantallas.png)
+Para el segundo de diagrama se considero uno mas simple, ya que el estudiante no va a tener un flujo tan extenso y su principal funcion es
+consultar y crear solicitudes, a pesar de eso se tuvo en cuenta el flujo y las respectivas pantallas que va a usar el estudiante.
+![Diagrama de flujo estudiante](/docs/Diagramas/DiagramaFlujoDePantallasEstudiante.png)
 
 ## 🚀 Cómo ejecutar el proyecto
 

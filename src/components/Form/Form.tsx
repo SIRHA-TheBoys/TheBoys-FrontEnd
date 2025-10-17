@@ -1,43 +1,9 @@
 import logoSirha from "../../assets/logo-sirha.jpg";
 import logoEci from "../../assets/logo-eci.png";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { loginHook } from "../../hooks/loginHook";
 export default function Form() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
-
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!email || !password) {
-      alert("Plese complete all fields");
-      setEmail("");
-      setPassword("");
-      return;
-    }
-
-    try {
-      const response = await fetch("http://localhost:8080/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        alert(errorData.message || "Invalid credentials");
-        return;
-      }
-
-      alert("Login succesful!");
-      navigate("/home");
-    } catch (error) {
-      console.log(error);
-      alert(":(");
-    }
-  };
+  const { email, password, setEmail, setPassword, handleLogin } = loginHook();
 
   return (
     <div className="login-form-container">
