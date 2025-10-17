@@ -55,10 +55,10 @@ A continuación se presentan los mockups de las diferentes vistas del sistema.
 Para realizar diagramas de flujo optimos a pesar de que nuestras pantallas no sean tan diferentes se decidio dividirlo en dos.
 La primera que va a remarcar el flujo de un administrador el cual es el que va a tener mas tareas.  En este diagrama lo que buscamos mostrar
 es una muestra de como va a ser nuestro front y como van a interactuar las pantallas planeadas entre si.
-![Diagrama de flujo admin/decano](/docs/diagramas/Diagramaciondepantallas.png)
+![Diagrama de flujo admin/decano](/docs/Diagramas/Diagramaciondepantallas.png)
 Para el segundo de diagrama se considero uno mas simple, ya que el estudiante no va a tener un flujo tan extenso y su principal funcion es
 consultar y crear solicitudes, a pesar de eso se tuvo en cuenta el flujo y las respectivas pantallas que va a usar el estudiante.
-![Diagrama de flujo estudiante](/docs/diagramas/DiagramaFlujoDePantallasEstudiante.png)
+![Diagrama de flujo estudiante](/docs/Diagramas/DiagramaFlujoDePantallasEstudiante.png)
 
 ## 🚀 Cómo ejecutar el proyecto
 
