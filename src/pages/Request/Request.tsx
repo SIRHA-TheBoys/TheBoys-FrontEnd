@@ -1,3 +1,9 @@
+import TopBar from "../../components/TopBar";
+
 export default function Request() {
-  return <h1>Hola</h1>;
+  return (
+    <div>
+      <TopBar />
+    </div>
+  );
 }

@@ -2,6 +2,11 @@ import logoSirha from "../assets/logo-sirha.jpg";
 import logoEci from "../assets/logo-eci.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8ffeede47ffce737e9f92e6f3e61c91d464b3135
 export default function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
