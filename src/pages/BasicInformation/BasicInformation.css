@@ -5,34 +5,97 @@
   min-height: calc(100vh - 60px);
   box-sizing: border-box;
   background: #f7fafc;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 18px;
+
+  color: #111827;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-.page-header h1 { margin: 0 0 8px 0; font-size: 22px; }
-.page-header p { margin: 0 0 18px 0; color: #6b7280; }
+.profile-title {
+  width: 100%;
+  max-width: 680px;
+}
+.profile-title h1 {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  color: #111827;
+  font-weight: 700;
+}
+.profile-title p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
 
 .profile-card {
   background: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 24px;
   max-width: 680px;
+  width: 100%;
   box-shadow: 0 1px 6px rgba(2,6,23,0.06);
+  border: 1px solid rgba(2,6,23,0.04);
 }
 
 .profile-form { 
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
+
 .profile-form label {
-    display: flex;
-    flex-direction: column;
-    font-size: 13px;
-    color: #374151;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #374151;
+  font-weight: 600;
 }
-.profile-form input {
+
+.profile-form input,
+.profile-form textarea,
+.profile-form select {
   margin-top: 6px;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border: 1px solid #e6eef2;
   border-radius: 6px;
   background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.profile-form input::placeholder,
+.profile-form textarea::placeholder {
+  color: #9aa3ad;
+  opacity: 1;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus,
+.profile-form select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 4px rgba(96,165,250,0.08);
+}
+
+.profile-form .help {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+  .profile-card {
+    max-width: 100%;
+    padding: 20px;
+  }
 }

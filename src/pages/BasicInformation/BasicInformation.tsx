@@ -7,7 +7,7 @@ export default function BasicInformation() {
       <TopBar />
       <SideBar />
       <main className="main-content">
-        <div>
+        <div className="profile-title">
           <h1>Perfil de Usuario</h1>
           <p> Información Básica del Usuario</p>
         </div>
@@ -16,26 +16,39 @@ export default function BasicInformation() {
           <form className="profile-form">
             <label>
               Name
-              <input type="text" defaultValue="Example: Nestor Lopez" />
+              <input
+                type="text"
+                placeholder="Example: Nestor Lopez"
+                defaultValue="Nestor Lopez"
+              />
             </label>
             <label>
               Identification
-              <input type="text" defaultValue="Example: 1000099099" />
+              <input
+                type="text"
+                defaultValue="1000099099"
+                placeholder="Example: 1000099099"
+              />
             </label>
             <label>
               Role
-              <input type="text" defaultValue="Example: Administrator" />
+              <input
+                type="text"
+                defaultValue="Student"
+                placeholder="Example: Student"
+              />
             </label>
             <label>
               Career
               <input
                 type="text"
-                defaultValue="Example: Engineering Of Systems"
+                defaultValue="Engineering Of Systems"
+                placeholder="Example: Engineering Of Systems"
               />
             </label>
             <label>
               Semester
-              <input type="text" defaultValue="Example: 7" />
+              <input type="text" defaultValue="7" placeholder="Example: 7" />
             </label>
           </form>
         </section>
