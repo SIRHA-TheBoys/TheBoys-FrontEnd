@@ -1,7 +1,32 @@
 import TopBar from "../../components/TopBar/TopBar";
 import SideBar from "../../components/SideBar/SideBar";
+import { useEffect, useState} from "react";
 import "./BasicInformation.css";
+interface User {
+  id: string
+  name: string
+  email: string
+  role: Role
+}
+
+type Role = 'STUDENT' | 'DEANERY' | 'ADMINISTRATOR';
+
 export default function BasicInformation() {
+
+  const [user, setUser] = useState<User | null >(null);
+
+  useEffect(function () {
+
+	fetch("http://localhost:8080/users/9999999999")
+		.then(res => res.json())
+		.then(response => {
+			const user  = response
+			console.log (response)
+      setUser(user)
+	});
+  
+  } )
+
   return (
     <div>
       <TopBar />
@@ -18,24 +43,21 @@ export default function BasicInformation() {
               Name
               <input
                 type="text"
-                placeholder="Example: Nestor Lopez"
-                defaultValue="Nestor Lopez"
+                defaultValue={user?.name}
               />
             </label>
             <label>
               Identification
               <input
                 type="text"
-                defaultValue="1000099099"
-                placeholder="Example: 1000099099"
+                defaultValue={user?.id}
               />
             </label>
             <label>
               Role
               <input
                 type="text"
-                defaultValue="Student"
-                placeholder="Example: Student"
+                defaultValue={user?.role}
               />
             </label>
             <label>
