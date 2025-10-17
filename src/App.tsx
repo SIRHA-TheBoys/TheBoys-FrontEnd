@@ -15,10 +15,7 @@ function App() {
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/requests" element={<Request />} />
         <Route path="/basicInformation" element={<BasicInformation />} />
-        <Route
-          path="/academicTrafficLight"
-          element={<AcademicTrafficLight />}
-        />
+        <Route path="/academicTrafficLight" element={<AcademicTrafficLight />} />
       </Routes>
     </Router>
   );
