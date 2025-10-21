@@ -1,12 +1,15 @@
 import ScheduleTable from "../../components/ScheduleTable/ScheduleTable";
 import SelectSemester from "../../components/SelectSemester/SelectSemester";
-import TopBar from "../../components/TopBar";
+import SideBar from "../../components/SideBar/SideBar";
+import TopBar from "../../components/TopBar/TopBar";
+
 import "./Schedule.css";
 
 export default function Schedule() {
   return (
     <div>
       <TopBar />
+      <SideBar />
       <div className="schedule">
         <h2 className="schedule_title">My Schedule</h2>
       </div>
