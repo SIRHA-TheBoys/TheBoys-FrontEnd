@@ -1,0 +1,18 @@
+.request_title{
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+.buttonBackRequest{
+    background: #861b1b;
+    color: white;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 950px;
+    margin-top: 500px;
+}
