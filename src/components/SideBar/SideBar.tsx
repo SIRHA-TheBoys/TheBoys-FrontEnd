@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { FaHome, FaCalendarAlt, FaExchangeAlt, FaTrafficLight, FaUser } from "react-icons/fa";
 import "./SideBar.css";
+import { loginHook } from "../../hooks/loginHook";
 
 export default function SideBar() {
+
+  const { role } = loginHook();
+
   return (
     <aside className="sidebar">
       <nav>

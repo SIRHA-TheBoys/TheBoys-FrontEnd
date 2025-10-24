@@ -2,7 +2,7 @@ import TopBar from "../../components/TopBar/TopBar";
 import SideBar from "../../components/SideBar/SideBar";
 import Information from "../../components/Information/Information";
 import "./BasicInformation.css";
-import { userHook} from "../../hooks/userHook"
+import { userHook } from "../../hooks/userHook"
 
 export default function BasicInformation() {
 

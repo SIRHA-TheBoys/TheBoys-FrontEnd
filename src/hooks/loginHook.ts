@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 export function loginHook(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [role, setRole] = useState("");
 
     const navigate = useNavigate();
 
@@ -20,7 +21,7 @@ export function loginHook(){
             const response = await fetch("http://localhost:8080/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({ email, password, role }),
         });
 
         const userData = await response.json();
@@ -38,5 +39,5 @@ export function loginHook(){
         }
     };
 
-    return {email, password, setEmail, setPassword, handleLogin};
+    return {email, password, role, setEmail, setPassword, handleLogin, setRole};
 }
