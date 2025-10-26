@@ -26,10 +26,13 @@
   margin-top: 80px;
   padding: 20px;
   background-color: #fafafa;
-  height: calc(100vh - 80px); /* altura exacta menos la topbar */
-  overflow-y: auto; /* activa scroll vertical */
+  height: calc(100vh - 80px);
+  /* altura exacta menos la topbar */
+  overflow-y: auto;
+  /* activa scroll vertical */
   overflow-x: hidden;
-  display: block; /* evita que el flex limite el tamaño */
+  display: block;
+  /* evita que el flex limite el tamaño */
 }
 
 
@@ -80,7 +83,6 @@
   padding: 12px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  min-width: 425px; /
+  min-width: 425px;
   flex-shrink: 0;
 }
-

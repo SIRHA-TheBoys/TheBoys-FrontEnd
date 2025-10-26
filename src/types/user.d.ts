@@ -1,3 +1,5 @@
+import { StudyPlan } from "./studyPlan"
+
 export interface User {
     id?: string
     name?: string
@@ -6,4 +8,5 @@ export interface User {
     role?: Role
     career?: string
     semester?: number
+    studyPlan?: StudyPlan
 }

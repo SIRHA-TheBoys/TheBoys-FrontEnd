@@ -45,7 +45,6 @@ export default function AcademicTrafficLight() {
             ))}
           </div>
         </div>
-      
       </div>
     </div>
   );
