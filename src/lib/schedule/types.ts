@@ -1,9 +1,11 @@
-export interface ScheduleCell {
+export interface ScheduleEvent {
     subjectCode: string;
     subjectName: string;
     groupNumber: string;
-    rowSpan: number;
-    isStart: boolean;
+    startTime: string;
+    endTime: string;
+    startDate: Date;
+    endDate: Date;
 }
 
-export type ScheduleMatrix = (ScheduleCell | null)[][];
+export type DaySchedule = Record<string, ScheduleEvent[]>;

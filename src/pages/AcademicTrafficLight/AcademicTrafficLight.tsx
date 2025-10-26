@@ -14,7 +14,6 @@ export default function AcademicTrafficLight() {
   const { user, role } = userHook();
   const isAdmin = role === "administrator"
 
-  // Materias Por Semestre
   const semesters = subjects.reduce<Record<number, Subject[]>>((acc, subject) => {
     const semester = subject.semester || 1;
     if (!acc[semester]) acc[semester] = [];

@@ -1,20 +1,17 @@
+export const formatTime = (isoDate: string): string => {
+    const date = new Date(isoDate);
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours % 12 || 12;
+    const displayMinutes = minutes > 0 ? `:${minutes.toString().padStart(2, '0')}` : '';
+    return `${displayHours}${displayMinutes} ${ampm}`;
+};
+
 export const getDayName = (isoDate: string): string => {
     const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const date = new Date(isoDate);
     return dayNames[date.getDay()];
-};
-
-export const getDecimalHour = (isoDate: string): number => {
-    const date = new Date(isoDate);
-    return date.getHours() + date.getMinutes() / 60;
-};
-
-export const getHourIndex = (decimalHour: number): number => {
-    return decimalHour - 7; // 7 AM es la hora base (índice 0)
-};
-
-export const calculateRowSpan = (startHour: number, endHour: number): number => {
-    return Math.ceil(endHour - startHour);
 };
 
 export const getSubjectColor = (subjectCode: string): string => {
@@ -27,12 +24,4 @@ export const getSubjectColor = (subjectCode: string): string => {
         hash = (subjectCode.codePointAt(i) || 0) + ((hash << 5) - hash);
     }
     return colors[Math.abs(hash) % colors.length];
-};
-
-export type SubjectMap = Map<string, string>;
-
-export const buildSubjectMap = (subjects: Array<{ code: string; name: string }>): SubjectMap => {
-    const map: SubjectMap = new Map();
-    for (const s of subjects) map.set(s.code, s.name);
-    return map;
 };
