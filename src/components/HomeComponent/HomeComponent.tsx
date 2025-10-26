@@ -1,5 +1,5 @@
 import Notifications from "../../components/Notifications/Notifications";
-import {FaUser, FaCalendarAlt, FaExchangeAlt, FaTrafficLight} from "react-icons/fa";
+import {FaUser, FaCalendarAlt, FaExchangeAlt, FaTrafficLight, FaChartBar} from "react-icons/fa";
 import { Link } from "react-router-dom"
 import { userHook } from "../../hooks/userHook"
 
@@ -11,7 +11,6 @@ export default function HomeComponent (){
   const mySchedule = isAdmin ? "Students Schedule" : "My Schedule";
   const request = isAdmin ? "Received Requests" : "My Requests";
   const academicTrafficLight = isAdmin ? "Student Academic Traffic Light" : "Academic Traffic Light";
-
 
   return (
     <div className = "mainContainer">
@@ -42,6 +41,14 @@ export default function HomeComponent (){
                   <span>Basic information</span>
                 </Link>
               </li>
+                { isAdmin ? (
+                    <li>
+                    <Link  to="/statistic" className="home-link">
+                    <FaChartBar className="icon" />
+                    <span> Statistics </span>
+                    </Link>
+                    </li>
+                ) : null}
             </ul>
           </nav>
         </div>
