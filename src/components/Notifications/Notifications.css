@@ -11,6 +11,18 @@
     padding-left: 20px;
 }
 
+.icon-pending {
+  color: #facc15; /* amarillo */
+}
+
+.icon-approved {
+  color: #22c55e; /* verde */
+}
+
+.icon-rejected {
+  color: #ef4444; /* rojo */
+}
+
 .text {
     padding-left: 20px;
     line-height: 16px;

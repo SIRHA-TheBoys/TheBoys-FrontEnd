@@ -41,7 +41,7 @@ export default function Home() {
         </div>
         <div className="notificationContainer">
           <h2>Notifications</h2>
-          <Notifications/>
+
           <nav>
             <ul>
               <li>

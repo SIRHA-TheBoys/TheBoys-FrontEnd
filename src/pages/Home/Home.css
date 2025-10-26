@@ -59,7 +59,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;   
+    gap: 12px
 }
+
 
 
 .notificationContainer nav {
@@ -80,6 +82,7 @@
     background-color: rgb(189, 194, 194);
     text-decoration: none;
     border-radius: 8px;
+    
 }
 
 .notifications-link {
