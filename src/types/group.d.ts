@@ -5,6 +5,6 @@ export interface Group {
     availableQuotas: number
     subjectCode: string
     usersId: Array<string>
-    schedules: Schedule
+    schedules: Schedule[]
 
 }

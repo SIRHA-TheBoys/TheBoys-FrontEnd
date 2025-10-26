@@ -15,7 +15,6 @@ export function userHook() {
       .then(res => res.json())
       .then(response => {
         const user = response
-        console.log(response)
         setUser(user)
         setRole(roleU)
       });

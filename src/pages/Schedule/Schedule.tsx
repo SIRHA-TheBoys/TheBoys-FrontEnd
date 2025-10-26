@@ -13,7 +13,6 @@ export default function Schedule() {
 
   const isAdmin = role === "administrator"
 
-  console.log(role)
 
   return (
     <div>
@@ -24,7 +23,7 @@ export default function Schedule() {
       </div>
       <div className="select_semester">
         <SelectSemester />
-        { isAdmin && <PopUpStudentID />}
+        { isAdmin && <PopUpStudentID name="Consult Student Schedule"/>}
       </div>
       <div className="schedule_table">
         <ScheduleTable />

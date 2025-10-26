@@ -6,11 +6,13 @@ import subjectHook from "../../hooks/subjectHook";
 import { Subject } from "../../types/subject";
 import "./AcademicTrafficLight.css";
 import { userHook } from "../../hooks/userHook";
+import PopUpStudentID from "../../components/PopUpStudentID/PopUpStudentID";
 
 export default function AcademicTrafficLight() {
 
   const { subjects } = subjectHook();
-  const { user } = userHook();
+  const { user, role } = userHook();
+  const isAdmin = role === "administrator"
 
   // Materias Por Semestre
   const semesters = subjects.reduce<Record<number, Subject[]>>((acc, subject) => {
@@ -26,14 +28,12 @@ export default function AcademicTrafficLight() {
       <div className="main">
         <SideBar />
         <div className="content">
+          { isAdmin && <PopUpStudentID name = "Consult Student Academic Traffic Light"/>}
           <div>
             <AcademicInfoBar {...user}/>
           </div>
-
           <div>
-            
           </div>
-
           <div className="semesters">
             {Object.entries(semesters).map(([semester, subjectsInSemester]) => (
               <div key={semester} className="semester">

@@ -1,31 +1,60 @@
+import React, { useMemo } from "react";
 import "./ScheduleTable.css";
+import useScheduleHook from "../../hooks/scheduleHook";
+import subjectHook from "../../hooks/subjectHook";
+import { DAYS, HOURS } from "../../lib/schedule/constants";
+import { buildScheduleMatrix } from "../../lib/schedule/buildMatrix";
+import { getSubjectColor } from "../../lib/schedule/helpers";
+import type { ScheduleCell } from "../../lib/schedule/types";
+
 export default function ScheduleTable() {
-  const days = [
-    "Monday", "Tuesday", "Wednesday", "Thursday", 
-    "Friday", "Saturday", "Sunday"
-];
-  const hours = [
-    "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM",
-    "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"
-  ];
+  const { groups } = useScheduleHook();
+  const { subjects } = subjectHook();
+
+  // Construir matriz de horarios con helpers externos (memoizado)
+  const scheduleMatrix: (ScheduleCell | null)[][] = useMemo(() => (
+    buildScheduleMatrix(groups, subjects, /*rows*/ 13, DAYS)
+  ), [groups, subjects]);
 
   return (
     <div className="schedule-grid">
-      <div className="grid-header">
-        <div className="cell header time-header">Hour</div>
-        {days.map((day) => (
-          <div key={day} className="cell header">{day}</div>
-        ))}
-      </div>
-
-      {hours.map((hour) => (
-        <div key={hour} className="grid-row">
-          <div className="cell time">{hour}</div>
-          {days.map((day) => (
-            <div key={day} className="cell"></div>
-          ))}
-        </div>
+      <div className="cell header time-header">Hour</div>
+      {DAYS.map((day) => (
+        <div key={day} className="cell header">{day}</div>
       ))}
+      {HOURS.map((hour, hourIndex) => {
+        return (
+          <React.Fragment key={`row-${hour}`}>
+            <div key={`time-${hour}`} className="cell time">{hour}</div>
+            {DAYS.map((day, dayIndex) => {
+              const cellData = scheduleMatrix[dayIndex][hourIndex];
+              if (cellData && !cellData.isStart) {
+                return null;
+              }
+              if (cellData?.isStart) {
+                return (
+                  <div 
+                    key={`${day}-${hourIndex}`}
+                    className="cell subject-cell"
+                    style={{
+                      backgroundColor: getSubjectColor(cellData.subjectCode),
+                      gridRow: `span ${cellData.rowSpan}`
+                    }}
+                  >
+                    <div className="subject-info">
+                      <div className="subject-name">{cellData.subjectName}</div>
+                      <div className="subject-group">Grupo {cellData.groupNumber}</div>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <div key={`${day}-${hourIndex}`} className="cell empty-cell"></div>
+              );
+            })}
+          </React.Fragment>
+        );
+      })}
     </div>
   );
 }

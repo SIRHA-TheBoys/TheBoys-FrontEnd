@@ -35,6 +35,10 @@
   /* evita que el flex limite el tamaño */
 }
 
+body {
+  overflow-y: scroll;
+}
+
 
 /* Barra superior */
 .topbar {

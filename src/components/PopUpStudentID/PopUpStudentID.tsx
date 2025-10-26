@@ -1,7 +1,11 @@
 import { useState } from "react";
 import "./PopUpStudentID.css"
 
-export default function PopUpStudentID(){
+interface Props{
+    name: string
+}
+
+export default function PopUpStudentID({name} : Props){
 
     const [open, setOpen] = useState(false);
     const [studentId, setStudentId] = useState("");
@@ -13,7 +17,7 @@ export default function PopUpStudentID(){
     return (
         <>
         <button className="schedule-button" onClick={() => setOpen(true)}>
-        Consult Student Schedule
+        {name}
         </button>
 
         {open && (

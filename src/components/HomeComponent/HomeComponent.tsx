@@ -2,15 +2,11 @@ import Notifications from "../../components/Notifications/Notifications";
 import {FaUser, FaCalendarAlt, FaExchangeAlt, FaTrafficLight} from "react-icons/fa";
 import { Link } from "react-router-dom"
 import { userHook } from "../../hooks/userHook"
-import { useState } from "react";
-import PopUpStudentID from "../PopUpStudentID/PopUpStudentID";
 
 export default function HomeComponent (){
 
   const { role }  = userHook();
   const isAdmin = role === "administrator";
-
-  const [showPopUp, setShowPopup] = useState(false);
 
   const mySchedule = isAdmin ? "Students Schedule" : "My Schedule";
   const request = isAdmin ? "Received Requests" : "My Requests";
