@@ -1,11 +1,52 @@
+import CourseCard from "../../components/CourseCard/CourseCard";
 import SideBar from "../../components/SideBar/SideBar";
+import AcademicInfoBar from "../../components/AcademicInfoBar/AcademicInfoBar";
 import TopBar from "../../components/TopBar/TopBar";
+import subjectHook from "../../hooks/subjectHook";
+import { Subject } from "../../types/subject";
+import "./AcademicTrafficLight.css";
+import { userHook } from "../../hooks/userHook";
+import { UserCircle2 } from "lucide-react";
 
 export default function AcademicTrafficLight() {
+
+  const { subjects } = subjectHook();
+  const { user } = userHook();
+
+  // Materias Por Semestre
+  const semesters = subjects.reduce<Record<number, Subject[]>>((acc, subject) => {
+    const semester = subject.semester || 1;
+    if (!acc[semester]) acc[semester] = [];
+    acc[semester].push(subject);
+    return acc;
+  }, {});
+
   return (
-    <div>
+    <div className="layout">
       <TopBar />
-      <SideBar />
+      <div className="main">
+        <SideBar />
+        <div className="content">
+          <div>
+            <AcademicInfoBar {...user}/>
+          </div>
+          <div className="semesters">
+            {Object.entries(semesters).map(([semester, subjectsInSemester]) => (
+              <div key={semester} className="semester">
+                <h3>Semestre {semester}</h3>
+                {subjectsInSemester.map((subject) => (
+                  <CourseCard
+                    name={subject.name}
+                    credits={subject.credits}
+                    status={subject.status}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      
+      </div>
     </div>
   );
 }

@@ -6,4 +6,4 @@ export type Career = 'CYBERSECURITY_ENGINEERING' | 'SYSTEMS_ENGINEERING' | 'ARTI
 
 export type State = 'PENDIENT' | 'INPROGRESS' | 'APPROVED' | 'REJECTED'
 
-export type Status = 'APPROVED' | 'REPROVED' | 'INPROGRESS'
+export type Status = 'APPROVED' | 'REPROVED' | 'INPROGRESS' | 'PENDING'

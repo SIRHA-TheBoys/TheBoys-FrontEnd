@@ -1,0 +1,86 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebarfijo */
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+
+/* Contenido principal */
+.content {
+  margin-left: 250px;
+  margin-top: 80px;
+  padding: 20px;
+  background-color: #fafafa;
+  height: calc(100vh - 80px); /* altura exacta menos la topbar */
+  overflow-y: auto; /* activa scroll vertical */
+  overflow-x: hidden;
+  display: block; /* evita que el flex limite el tamaño */
+}
+
+
+/* Barra superior */
+.topbar {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+}
+
+/*Contenedor de todos los semestres*/
+.semesters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  font-family: "Spline Sans", sans-serif;
+}
+
+/*Columna De Los Semestres*/
+.semesters {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/*Columna Semestre Horizontal*/
+.semester {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-width: 425px; /
+  flex-shrink: 0;
+}
+

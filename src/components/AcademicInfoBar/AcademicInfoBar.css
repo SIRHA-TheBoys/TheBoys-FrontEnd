@@ -1,0 +1,71 @@
+/* === AcademicInfoBar.css === */
+
+.student-info-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f1f1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Spline Sans", sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Encabezado con carrera y plan */
+.student-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  border-bottom: 2px solid #0a0a0a;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.student-info-header h2 {
+  font-size: 1.4rem;
+  color: #0056b3;
+  margin: 0;
+}
+
+.student-info-header p {
+  font-weight: bold;
+  color: #777;
+  margin: 0;
+}
+
+/* Cuerpo con columnas horizontales */
+.student-info-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* permite que se adapte en pantallas pequeñas */
+}
+
+/* Cada columna */
+.student-info-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 350px;
+}
+
+/* Textos */
+.student-info-details p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.student-info-details strong {
+  color: #222;
+  font-weight: 600;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .student-info-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
