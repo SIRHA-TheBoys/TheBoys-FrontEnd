@@ -9,7 +9,6 @@ export default function Request() {
   <div>
     <TopBar />
     <SideBar />
-
     <div className="request">
       <h3 className="request-label">Schedule Change Requests</h3>
       <h1 className="request-welcome">Consult and create your requests</h1>
