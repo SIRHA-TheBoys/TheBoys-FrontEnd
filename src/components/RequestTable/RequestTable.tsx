@@ -1,10 +1,12 @@
 import responseRequestHook from "../../hooks/responseRequestHook";
 import "./RequestTable.css";
 import { userHook } from "../../hooks/userHook"
+import subjectHook from "../../hooks/subjectHook" 
 
 export default function RequestTable() {
   const { request } = responseRequestHook();
   const { user } = userHook();
+  const { subjects } = subjectHook();
   
   const myRequests = Array.isArray(request)
     ? request.filter((r: any) => r.userId === user?.id)
@@ -31,12 +33,12 @@ export default function RequestTable() {
 
         <tbody>
           {myRequests.map((req: any, idx: number) => (
-            <tr key={req.id ?? idx}>
-              <td>{req.userId ?? req.student ?? "-"}</td>
-              <td>{req.subject ?? req.groupOriginId ?? "-"}</td>
-              <td>{req.actualSchedule ?? "-"}</td>
-              <td>{req.requestedSchedule ?? req.groupDestinyId ?? "-"}</td>
-              <td>{req.description ?? req.reason ?? "-"}</td>
+            <tr key={req.id}>
+              <td>{user?.name ?? "-"}</td>
+              <td>{req.subject ?? "-"}</td>
+              <td>{req.creationDate ?? "-"}</td>
+              <td>{req.responseDate ?? "-"}</td>
+              <td>{req.description ?? "-"}</td>
               <td>
                 <span className={`state-badge ${String(req.state).toLowerCase()}`}>
                   {String(req.state)}
