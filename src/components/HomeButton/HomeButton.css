@@ -1,0 +1,13 @@
+.mainContainer{
+    background-color: #7878786b;
+    border-radius: 16mm;
+    min-height: 6vh;
+    align-items: center;
+    align-content: center;
+
+}
+/*
+.buttonS, button{
+    background-color: #ff00006b;
+    min-width: 100vh;
+}

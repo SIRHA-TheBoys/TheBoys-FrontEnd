@@ -1,6 +1,7 @@
 import logoSirha from "../../assets/logo-sirha.jpg";
 import logoEci from "../../assets/logo-eci.png";
 import { loginHook } from "../../hooks/loginHook";
+import "./Form.css"
 export default function Form() {
 
   const { email, password, setEmail, setPassword, handleLogin } = loginHook();
@@ -29,7 +30,7 @@ export default function Form() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign in</button>
+        <button className = "signInButton" type="submit">Sign in</button>
       </form>
       <div className="eci-logo">
         <img src={logoEci} alt="Escuela Colombiana de Ingeniería" />

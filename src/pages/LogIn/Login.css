@@ -109,21 +109,6 @@ html, body {
   outline: none;
 }
 
-button {
-  background-color: #001d67;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #71737a;
-}
 
 .eci-logo {
   margin-top: 45px;
