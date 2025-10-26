@@ -6,7 +6,6 @@ import subjectHook from "../../hooks/subjectHook";
 import { Subject } from "../../types/subject";
 import "./AcademicTrafficLight.css";
 import { userHook } from "../../hooks/userHook";
-import { UserCircle2 } from "lucide-react";
 
 export default function AcademicTrafficLight() {
 
@@ -30,6 +29,11 @@ export default function AcademicTrafficLight() {
           <div>
             <AcademicInfoBar {...user}/>
           </div>
+
+          <div>
+            
+          </div>
+
           <div className="semesters">
             {Object.entries(semesters).map(([semester, subjectsInSemester]) => (
               <div key={semester} className="semester">
