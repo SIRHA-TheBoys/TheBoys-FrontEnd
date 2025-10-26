@@ -1,29 +1,43 @@
+import { useMemo } from "react";
 import "./ScheduleTable.css";
+import useScheduleHook from "../../hooks/scheduleHook";
+import subjectHook from "../../hooks/subjectHook";
+import { DAYS } from "../../lib/schedule/constants";
+import { groupScheduleByDay } from "../../lib/schedule/buildMatrix";
+import { getSubjectColor } from "../../lib/schedule/helpers";
+
 export default function ScheduleTable() {
-  const days = [
-    "Monday", "Tuesday", "Wednesday", "Thursday", 
-    "Friday", "Saturday", "Sunday"
-];
-  const hours = [
-    "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM",
-    "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"
-  ];
+  const { groups } = useScheduleHook();
+  const { subjects } = subjectHook();
+
+  const scheduleByDay = useMemo(() => (
+    groupScheduleByDay(groups, subjects)
+  ), [groups, subjects]);
 
   return (
-    <div className="schedule-grid">
-      <div className="grid-header">
-        <div className="cell header time-header">Hour</div>
-        {days.map((day) => (
-          <div key={day} className="cell header">{day}</div>
-        ))}
-      </div>
-
-      {hours.map((hour) => (
-        <div key={hour} className="grid-row">
-          <div className="cell time">{hour}</div>
-          {days.map((day) => (
-            <div key={day} className="cell"></div>
-          ))}
+    <div className="schedule-container">
+      {DAYS.map((day) => (
+        <div key={day} className="day-column">
+          <div className="day-header">{day}</div>
+          <div className="day-events">
+            {scheduleByDay[day]?.length > 0 ? (
+              scheduleByDay[day].map((event, index) => (
+                <div
+                  key={`${event.subjectCode}-${index}`}
+                  className="event-card"
+                  style={{ backgroundColor: getSubjectColor(event.subjectCode) }}
+                >
+                  <div className="event-time">
+                    {event.startTime} - {event.endTime}
+                  </div>
+                  <div className="event-subject">{event.subjectName}</div>
+                  <div className="event-group">Grupo {event.groupNumber}</div>
+                </div>
+              ))
+            ) : (
+              <div className="no-events">No sessions</div>
+            )}
+          </div>
         </div>
       ))}
     </div>

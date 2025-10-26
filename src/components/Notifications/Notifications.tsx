@@ -6,7 +6,7 @@ import { FaCheck, FaRegTimesCircle } from "react-icons/fa";
 interface Props {
     title: String;
     description: String;
-    state: "PENDIENT" | "APPROVED" | "REJECTED";
+    state: "PENDIENT" | "APPROVED" | "REJECTED" | "INPROGRESS";
 }
 
 
@@ -16,11 +16,14 @@ export default function Notifications({title, description, state}: Props) {
     switch (state){
       case "APPROVED":
         return <FaCheck className = " icon-approved " />;
-      case "PENDIENT":
-        return <IoIosWarning className= "icon-pending"/>;
       case "REJECTED":
-      default:
         return <FaRegTimesCircle className= "icon-rejected"/>;
+      case "INPROGRESS":
+        return null;
+      case "PENDIENT":
+      default:
+        return <IoIosWarning className= "icon-pending"/>;
+      
     }
   }
   return (

@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
 import { FaHome, FaCalendarAlt, FaExchangeAlt, FaTrafficLight, FaUser } from "react-icons/fa";
 import "./SideBar.css";
-import { loginHook } from "../../hooks/loginHook";
+import { userHook } from "../../hooks/userHook"
+
+
 
 export default function SideBar() {
 
-  const { role } = loginHook();
+  const { role }  = userHook();
+  const isAdmin = role === "administrator";
+
+  const mySchedule = isAdmin ? "Students Schedule" : "My Schedule";
+  const request = isAdmin ? "Received Requests" : "My Requests";
+  const academicTrafficLight = isAdmin ? "Student Academic Traffic Light" : "Academic Traffic Light";
+
+
 
   return (
     <aside className="sidebar">
@@ -21,21 +30,21 @@ export default function SideBar() {
           <li>
             <Link to="/schedule" className="sidebar-link">
               <FaCalendarAlt className="sidebar-icon" />
-              <span>My Schedule</span>
+              <span>{mySchedule}</span>
             </Link>
           </li>
 
           <li>
             <Link to="/requests" className="sidebar-link">
               <FaExchangeAlt className="sidebar-icon" />
-              <span>My Requests</span>
+              <span>{request}</span>
             </Link>
           </li>
 
           <li>
             <Link to="/academicTrafficLight" className="sidebar-link">
               <FaTrafficLight className="sidebar-icon" />
-              <span>Academic Traffic Light</span>
+              <span>{academicTrafficLight}</span>
             </Link>
           </li>
 

@@ -4,6 +4,7 @@ import { User } from "../types/user"
 export function userHook() {
 
   const [user, setUser] = useState<User | null>(null);
+  const [role, setRole] = useState("");
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (!storedUser) return;
@@ -14,10 +15,10 @@ export function userHook() {
       .then(res => res.json())
       .then(response => {
         const user = response
-        console.log(response)
         setUser(user)
+        setRole(roleU)
       });
 
   }, [])
-  return { user };
+  return { user, role };
 }

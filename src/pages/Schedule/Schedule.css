@@ -1,4 +1,4 @@
-.schedule  {
+.schedule {
   align-items: center;
   display: flex;
   margin-left: 350px;
@@ -15,6 +15,10 @@
 .select_semester {
   margin-left: 350px;
   margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .schedule_table {
