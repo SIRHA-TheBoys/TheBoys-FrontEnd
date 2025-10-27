@@ -1,5 +1,5 @@
+import useRequestNotificationsHook from "../../hooks/useRequestNotificationsHook";
 import Notification from "../Notifications/Notification";
-import useRequestNotificationsHook  from "../../hooks/useRequestNotificationsHook"
 import "./NotificationsList.css"
 
 export default function NotificationsList() {
