@@ -1,18 +1,17 @@
-import responseRequestHook from "../../hooks/responseRequestHook";
+import useRequestNotification from "../../hooks/useRequestNotificationsHook"
 import "./RequestTable.css";
 import { userHook } from "../../hooks/userHook"
-import subjectHook from "../../hooks/subjectHook" 
 
 export default function RequestTable() {
-  const { request } = responseRequestHook();
+  const { requests } = useRequestNotification();
   const { user } = userHook();
-  const { subjects } = subjectHook();
   
-  const myRequests = Array.isArray(request)
-    ? request.filter((r: any) => r.userId === user?.id)
-    : [];
 
-  if (myRequests.length === 0) {
+  if(!user || !requests) {
+    return <div className="requestTableContainer">Cargando...</div>;
+  }
+  
+  if (requests.length === 0) {
     return <div className="requestTableContainer">No hay solicitudes.</div>;
   }
 
@@ -32,7 +31,7 @@ export default function RequestTable() {
         </thead>
 
         <tbody>
-          {myRequests.map((req: any, idx: number) => (
+          {requests.map((req: any, idx: number) => (
             <tr key={req.id}>
               <td>{user?.name ?? "-"}</td>
               <td>{req.subject ?? "-"}</td>

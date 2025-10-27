@@ -13,7 +13,6 @@ export default function NotificationsList() {
         )
     }
     
-    
     return(
         <div className = "notifications-list">
             {requests.slice(-5).map((r) => (
