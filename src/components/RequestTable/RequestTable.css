@@ -1,4 +1,4 @@
-.requestTableContainer{
+.requestTableContainer {
   width: 100%;
   padding: 20px;
   overflow-x: auto;
@@ -8,7 +8,7 @@
 .requestTable {
   width: 100%;
   font-size: 14px;
-  border-collapse: separate; 
+  border-collapse: separate;
   border-spacing: 0 8px;
 }
 

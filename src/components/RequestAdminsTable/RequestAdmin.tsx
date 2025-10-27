@@ -1,29 +1,28 @@
-import useRequestsHook from "../../hooks/useRequestsHook"
-import "./RequestTable.css";
+import "./RequestAdmin.css";
+import { userHook } from "../../hooks/userHook"
+import allRequestsHook from "../../hooks/allRequestsHook";
 
-export default function RequestTable() {
-  const { requests, loading, error } = useRequestsHook();
+export default function RequestAdmin() {
+  const { request } = allRequestsHook(); // Request dado un estudiante
+  const { user } = userHook();
 
-  if (loading) {
-    return <div className="requestTableContainer">Loading requests...</div>;
-  }
-
-  if (error) {
-    return <div className="requestTableContainer">Error: {error}</div>;
+  if(!user || !request) {
+    return <div className="requestTableContainer">Cargando...</div>;
   }
   
-  if (requests.length === 0) {
-    return <div className="requestTableContainer">No requests found.</div>;
+  if (request.length === 0) {
+    return <div className="requestTableContainer">No hay solicitudes.</div>;
   }
 
-  return (
+
+ return (
     <div className="requestTableContainer">
       <table className="requestTable">
         <thead>
           <tr>
             <th>Subject</th>
-            <th>Creation Date</th>
-            <th>Response Date</th>
+            <th>Actual Schedule</th>
+            <th>Requested Schedule</th>
             <th>Reason</th>
             <th>State</th>
             <th>Actions</th>
@@ -31,7 +30,7 @@ export default function RequestTable() {
         </thead>
 
         <tbody>
-          {requests.map((req: any) => (
+          {request.map((req: any) => (
             <tr key={req.id}>
               <td>{req.subject ?? "-"}</td>
               <td>{req.creationDate ?? "-"}</td>
@@ -43,8 +42,7 @@ export default function RequestTable() {
                 </span>
               </td>
               <td>
-                <button className="details-button" 
-                    onClick={() => navigate(`/requests/${req.id}`)}>View details</button>
+                <button className="details-button">View details</button>
               </td>
             </tr>
           ))}

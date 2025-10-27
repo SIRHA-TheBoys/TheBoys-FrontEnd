@@ -12,10 +12,11 @@
   overflow: hidden;
 }
 
-.signInButton:hover, button:hover {
+.signInButton:hover,
+button:hover {
   background-color: #71737a;
   box-shadow: 0 4px 10px rgba(166, 28, 28, 0.2);
-  transform:  translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .signInButton::after {
@@ -30,6 +31,6 @@
   transition: left 0.5s ease;
 }
 
-.signInButton:hover::after{
+.signInButton:hover::after {
   left: 130%;
 }

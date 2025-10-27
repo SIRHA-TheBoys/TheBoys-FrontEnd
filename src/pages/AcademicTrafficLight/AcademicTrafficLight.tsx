@@ -7,12 +7,16 @@ import { Subject } from "../../types/subject";
 import "./AcademicTrafficLight.css";
 import { userHook } from "../../hooks/userHook";
 import PopUpStudentID from "../../components/PopUpStudentID/PopUpStudentID";
+import useConsultStudentInfoHook from "../../hooks/consultStudentInfoHook";
+import { useState } from "react";
 
 export default function AcademicTrafficLight() {
 
   const { subjects } = subjectHook();
   const { user, role } = userHook();
-  const isAdmin = role === "administrator"
+  const isAdmin = role === "administrator";
+  const [consultedStudentId, setConsultedStudentId] = useState("");
+  const { student: consultedStudent } = useConsultStudentInfoHook(consultedStudentId);
 
   const semesters = subjects.reduce<Record<number, Subject[]>>((acc, subject) => {
     const semester = subject.semester || 1;
@@ -27,9 +31,14 @@ export default function AcademicTrafficLight() {
       <div className="main">
         <SideBar />
         <div className="content">
-          { isAdmin && <PopUpStudentID name = "Consult Student Academic Traffic Light"/>}
+          { isAdmin && (
+            <PopUpStudentID
+              name="Consult Student Academic Traffic Light"
+              onSubmit={(id) => setConsultedStudentId(id)}
+            />
+          )}
           <div>
-            <AcademicInfoBar {...user}/>
+            <AcademicInfoBar {...(consultedStudent ?? user)} />
           </div>
           <div>
           </div>
@@ -39,6 +48,7 @@ export default function AcademicTrafficLight() {
                 <h3>Semestre {semester}</h3>
                 {subjectsInSemester.map((subject) => (
                   <CourseCard
+                    key={subject.code}
                     name={subject.name}
                     credits={subject.credits}
                     status={subject.status}

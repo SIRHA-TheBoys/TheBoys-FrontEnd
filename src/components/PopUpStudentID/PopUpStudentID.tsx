@@ -3,15 +3,22 @@ import "./PopUpStudentID.css"
 
 interface Props{
     name: string
+    onSubmit?: (studentId: string) => void
 }
 
-export default function PopUpStudentID({name} : Props){
+export default function PopUpStudentID({name, onSubmit} : Readonly<Props>){
 
     const [open, setOpen] = useState(false);
     const [studentId, setStudentId] = useState("");
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (e?: React.FormEvent) => {
+        if (e) e.preventDefault();
+        
+        if (studentId.trim() && onSubmit) {
+            onSubmit(studentId.trim());
+            setOpen(false);
+            setStudentId("");
+        }
     }
 
     return (
@@ -36,10 +43,10 @@ export default function PopUpStudentID({name} : Props){
                     /> 
                 </form>
                 <div className="popUp-buttons">
-                <button className="cancel-button" onClick={() => setOpen(false)}>
+                <button type="button" className="cancel-button" onClick={() => setOpen(false)}>
                     Cancel
                 </button>
-                <button className="send-button">Send</button>
+                <button type="button" className="send-button" onClick={() => handleSubmit()}>Send</button>
                 </div>
             </div>
             </div>

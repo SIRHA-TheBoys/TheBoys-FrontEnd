@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { User } from "../types/user";
 
-export function userHook() {
+export function useUserHook() {
 
   const [user, setUser] = useState<User | null>(null);
   const [role, setRole] = useState("");
@@ -22,3 +22,5 @@ export function userHook() {
   }, [])
   return { user, role };
 }
+
+export const userHook = useUserHook;
