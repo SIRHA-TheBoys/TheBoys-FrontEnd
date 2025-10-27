@@ -1,4 +1,5 @@
 import useRequestsHook from "../../hooks/useRequestsHook"
+import { formatDateToLocal } from "../../lib/dateHelpers";
 import "./RequestTable.css";
 
 export default function RequestTable() {
@@ -34,8 +35,8 @@ export default function RequestTable() {
           {requests.map((req: any) => (
             <tr key={req.id}>
               <td>{req.subject ?? "-"}</td>
-              <td>{req.creationDate ?? "-"}</td>
-              <td>{req.responseDate ?? "-"}</td>
+              <td>{formatDateToLocal(req.creationDate)}</td>
+              <td>{formatDateToLocal(req.responseDate)}</td>
               <td>{req.description ?? "-"}</td>
               <td>
                 <span className={`state-badge ${String(req.state).toLowerCase()}`}>

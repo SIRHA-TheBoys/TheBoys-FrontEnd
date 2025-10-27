@@ -43,7 +43,7 @@ export default function HomeComponent (){
               </li>
                 { isAdmin ? (
                     <li>
-                    <Link  to="/statistic" className="home-link">
+                    <Link  to="/requestStatistics" className="home-link">
                     <FaChartBar className="icon" />
                     <span> Statistics </span>
                     </Link>

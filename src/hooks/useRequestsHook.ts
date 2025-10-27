@@ -24,15 +24,13 @@ export default function useRequestsHook(): UseRequestsResult {
 
         setLoading(true);
         setError(null);
-
-        // URL condicional según el rol
         const url = isAdmin
             ? `http://localhost:8080/requests/allRequests`
             : `http://localhost:8080/requests/${user?.id}`;
 
         fetch(url)
             .then(res => {
-                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                if (!res.ok) throw new Error("There are no current requests, please try again later.");
                 return res.json();
             })
             .then(response => {

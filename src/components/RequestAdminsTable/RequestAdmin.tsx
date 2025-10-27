@@ -1,16 +1,17 @@
 import "./RequestAdmin.css";
 import { userHook } from "../../hooks/userHook"
-import allRequestsHook from "../../hooks/allRequestsHook";
+import { formatDateToLocal } from "../../lib/dateHelpers";
+import useRequestHook from "../../hooks/useRequestNotificationsHook";
 
 export default function RequestAdmin() {
-  const { request } = allRequestsHook(); // Request dado un estudiante
+  const { requests } = useRequestHook(); // Request dado un estudiante
   const { user } = userHook();
 
-  if(!user || !request) {
+  if(!user || !requests) {
     return <div className="requestTableContainer">Cargando...</div>;
   }
   
-  if (request.length === 0) {
+  if (requests.length === 0) {
     return <div className="requestTableContainer">No hay solicitudes.</div>;
   }
 
@@ -30,11 +31,11 @@ export default function RequestAdmin() {
         </thead>
 
         <tbody>
-          {request.map((req: any) => (
+          {requests.map((req: any) => (
             <tr key={req.id}>
               <td>{req.subject ?? "-"}</td>
-              <td>{req.creationDate ?? "-"}</td>
-              <td>{req.responseDate ?? "-"}</td>
+              <td>{formatDateToLocal(req.creationDate)}</td>
+              <td>{formatDateToLocal(req.responseDate)}</td>
               <td>{req.description ?? "-"}</td>
               <td>
                 <span className={`state-badge ${String(req.state).toLowerCase()}`}>

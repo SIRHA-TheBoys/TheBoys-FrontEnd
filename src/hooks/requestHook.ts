@@ -2,27 +2,28 @@ import { useState } from "react";
 import { userHook } from "./userHook"
 import useScheduleHook from "./scheduleHook"
 
-export default function requestHook(){
+export default function useRequestHook() {
 
   const [open, setOpen] = useState(false);
   const [description, setDescription] = useState("");
-  const {groups} = useScheduleHook()
+  const { groups } = useScheduleHook()
   const [showAlert, setShowAlert] = useState(false);
   const [groupOriginId, setGroupOriginId] = useState("");
   const [groupDestinyId, setGroupDestinyId] = useState("");
   const { user } = userHook();
 
 
-  async function handleOnSubmit(){
+  async function handleOnSubmit() {
 
     const payload = {
-        userId: user?.id, 
-        groupOriginId: groupOriginId, 
-        groupDestinyId: groupDestinyId, 
-        description: description, 
-        creationDate: new Date(), 
-        responseDate: null, 
-        state: "PENDIENT" }
+      userId: user?.id,
+      groupOriginId: groupOriginId,
+      groupDestinyId: groupDestinyId,
+      description: description,
+      creationDate: new Date().toISOString(),
+      responseDate: null,
+      state: "PENDIENT"
+    }
 
     const res = await fetch("http://localhost:8080/requests", {
       method: "POST",
@@ -32,8 +33,8 @@ export default function requestHook(){
       body: JSON.stringify(payload)
     })
     setShowAlert(true);
-    setTimeout(() => { 
-      setShowAlert(false); 
+    setTimeout(() => {
+      setShowAlert(false);
       setOpen(false);
       setGroupOriginId("")
       setGroupDestinyId("")
@@ -45,6 +46,6 @@ export default function requestHook(){
 
   }
 
-  return { handleOnSubmit, open, description, groups, showAlert, groupOriginId, groupDestinyId, user, setOpen, setDescription, setShowAlert, setGroupOriginId, setGroupDestinyId}
+  return { handleOnSubmit, open, description, groups, showAlert, groupOriginId, groupDestinyId, user, setOpen, setDescription, setShowAlert, setGroupOriginId, setGroupDestinyId }
 
 }
