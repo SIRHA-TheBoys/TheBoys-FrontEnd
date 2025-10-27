@@ -5,12 +5,17 @@ import subjectHook from "../../hooks/subjectHook"
 
 export default function RequestTable() {
   const { request } = responseRequestHook();
-  const { user } = userHook();
+  const { user, role} = userHook();
   const { subjects } = subjectHook();
+
+
+  const isAdmin = role === "ADMINISTRATOR";
   
   const myRequests = Array.isArray(request)
     ? request.filter((r: any) => r.userId === user?.id)
     : [];
+
+  const allRequest = Array.isArray(request);
 
   if (myRequests.length === 0) {
     return <div className="requestTableContainer">No hay solicitudes.</div>;
@@ -19,7 +24,7 @@ export default function RequestTable() {
   return (
     <div className="requestTableContainer">
       <table className="requestTable">
-        <thead>
+        <thead>  
           <tr>
             <th>Student</th>
             <th>Subject</th>
