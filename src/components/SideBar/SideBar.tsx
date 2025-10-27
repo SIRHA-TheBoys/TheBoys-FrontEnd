@@ -45,6 +45,12 @@ export default function SideBar() {
               <span>Basic Information</span>
             </Link>
           </li>
+          <li>
+            <Link to="/requestStatistics" className="sidebar-link">
+              <FaUser className="sidebar-icon" />
+              <span>Request Statistics</span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </aside>
