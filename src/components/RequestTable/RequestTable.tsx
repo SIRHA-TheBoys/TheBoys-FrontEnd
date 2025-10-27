@@ -1,9 +1,11 @@
 import useRequestsHook from "../../hooks/useRequestsHook"
 import { formatDateToLocal } from "../../lib/dateHelpers";
 import "./RequestTable.css";
+import { useNavigate } from "react-router-dom";
 
 export default function RequestTable() {
   const { requests, loading, error } = useRequestsHook();
+  const navigate = useNavigate();
 
   if (loading) {
     return <div className="requestTableContainer">Loading requests...</div>;

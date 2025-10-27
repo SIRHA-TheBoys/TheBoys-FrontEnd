@@ -6,6 +6,7 @@ import AcademicTrafficLight from "./pages/AcademicTrafficLight/AcademicTrafficLi
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BasicInformation from "./pages/BasicInformation/BasicInformation";
 import RequestStatistics from "./pages/RequestStatistics/RequestStatistics";
+import RequestDescription from "./pages/RequestDescription/RequestDescription";
 
 function App() {
   return (
