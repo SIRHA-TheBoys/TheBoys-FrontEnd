@@ -13,6 +13,17 @@
   z-index: 200;
   padding: 24px 0;
   box-sizing: border-box;
+
+  transform: translateX(-260px);
+  opacity: 0;
+  animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .sidebar nav ul {
@@ -26,7 +37,7 @@
 }
 
 .sidebar nav ul li a {
-  color: #1e293b;
+  color: #2E2E2E;
   text-decoration: none;
   font-size: 18px;
   padding: 8px 24px;
@@ -34,16 +45,23 @@
   align-items: center;
   gap: 12px; 
   border-radius: 8px;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.3s ease;
 }
 
 .sidebar nav ul li a.active,
 .sidebar nav ul li a:hover {
-  background: #e0e7ef;
-  color: #2563eb;
+  background: #cfd0d1;
+  color: #A61C1C;
+  transform: translateX(1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ícono */
-.icon {
+.sidebar-icon {
   font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.sidebar nav ul li a:hover .sidebar-icon {
+  transform: rotate(8deg) scale(1.1);
 }

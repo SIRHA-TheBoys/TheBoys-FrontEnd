@@ -22,3 +22,8 @@
   transition: all 0.2s ease-in-out;
   outline: none;
 }
+
+.select-dropdown:hover{
+  background-color: rgb(233, 228, 228);
+}
+
