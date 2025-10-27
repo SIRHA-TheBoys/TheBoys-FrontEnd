@@ -1,32 +1,31 @@
 .notifications {
     display: flex;
     align-items: center;
-    background-color: #E0CFBC;
+    background-color: #DADADA;
     width: 100%;
     border-radius: 10px;
 }
 
 .notifications h1 {
-    font-family: 'Spline Sans', sans-serif;
     padding-left: 20px;
 }
 
 .icon-pending {
-  color: #facc15; 
+  color: #FFC107; 
   padding-left: 20px;
   width: 40px;
   height: 40px;
 }
 
 .icon-approved {
-  color: #22c55e; 
+  color: #4CAF50; 
   padding-left: 20px;
   width: 40px;
   height: 40px;
 }
 
 .icon-rejected {
-  color: #ef4444; 
+  color: #F44336; 
   padding-left: 20px;
   width: 40px;
   height: 40px;
@@ -40,7 +39,7 @@
 
 .text {
     padding-left: 20px;
-    line-height: 16px;
+    line-height: 12px;
 }
 
 

@@ -1,5 +1,5 @@
 .signInButton {
-  background-color: #001d67;
+  background-color: #A61C1C;
   color: white;
   border: none;
   padding: 12px;
@@ -7,9 +7,29 @@
   cursor: pointer;
   font-size: 15px;
   font-weight: 500;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .signInButton:hover, button:hover {
   background-color: #71737a;
+  box-shadow: 0 4px 10px rgba(166, 28, 28, 0.2);
+  transform:  translateY(-1px);
+}
+
+.signInButton::after {
+  content: "";
+  position: absolute;
+  left: -75%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.signInButton:hover::after{
+  left: 130%;
 }
