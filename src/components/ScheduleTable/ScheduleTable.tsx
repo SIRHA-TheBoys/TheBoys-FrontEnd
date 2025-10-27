@@ -5,10 +5,18 @@ import subjectHook from "../../hooks/subjectHook";
 import { DAYS } from "../../lib/schedule/constants";
 import { groupScheduleByDay } from "../../lib/schedule/buildMatrix";
 import { getSubjectColor } from "../../lib/schedule/helpers";
+import { Group } from "../../types/group";
 
-export default function ScheduleTable() {
-  const { groups } = useScheduleHook();
+interface ScheduleTableProps {
+  customGroups?: Group[]
+}
+
+export default function ScheduleTable({ customGroups }: ScheduleTableProps = {}) {
+  const { groups: userGroups } = useScheduleHook();
   const { subjects } = subjectHook();
+
+  // Usa customGroups si se proporciona, sino usa los grupos del usuario actual
+  const groups = customGroups || userGroups;
 
   const scheduleByDay = useMemo(() => (
     groupScheduleByDay(groups, subjects)

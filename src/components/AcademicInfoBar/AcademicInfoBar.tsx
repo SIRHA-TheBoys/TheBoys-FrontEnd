@@ -1,7 +1,7 @@
 import "./AcademicInfoBar.css";
 import { User } from "../../types/user";
 
-export default function AcademicInfoBar(user : User) {
+export default function AcademicInfoBar(user: Readonly<User>) {
   return (
     <div className="student-info-card">
       <div className="student-info-header">

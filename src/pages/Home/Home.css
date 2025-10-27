@@ -6,7 +6,7 @@
     flex-direction: row;
     left: 5vh;
     gap: 6vh;
-    font-family: 'Spline Sans', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
@@ -26,44 +26,74 @@
 }
 
 .buttonsContainer nav ul li a {
-    background-color: #78787836;
-    color: #1e293b;
+    background-color: #F4F4F4;
+    color: #2E2E2E;
     text-decoration: none;
     font-size: 18px;
-    padding: 8px 18px;
+    padding: 8px 20px;
     display: flex;
     align-items: center;
     gap: 12px; 
     border-radius: 8px;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition: background 0.5s ease, color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(92, 72, 72, 0.184);
+    position: relative;
+    overflow: hidden;
 }
 
 .buttonsContainer nav ul li a.active,
 .buttonsContainer nav ul li a:hover {
   background: #cfd0d1;
-  color: #eb2525;
+  color: #A61C1C;
+  box-shadow: 0 4px 12px rgba(166, 28, 28, 0.2);
+  transform: translateY(-2px);
+}
+
+.buttonsContainer nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: -75%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.buttonsContainer nav ul li a:hover::after {
+  left: 130%;
 }
 
 .icon{
-    background-color: #f1eaea;
-    padding: 6px;          
+    background-color: #DADADA;
+    padding: 8px;          
     border-radius: 8px;   
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
+.buttonsContainer nav ul li a:hover .icon {
+  transform: rotate(8deg) scale(1.1);
+  background-color: #FFDADA;
+}
 
 .notificationContainer{
-    background-color: #78787836;
+    background-color: #F4F4F4;
     width: 70vh;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;   
-    gap: 12px
-    
+    gap: 12px;
+    color: #2E2E2E;
+    transition: background 0.5s ease, color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(92, 72, 72, 0.184);
 }
 
-
+.notificationContainer:hover {
+  box-shadow: 0 8px 20px rgba(143, 136, 136, 0.23);
+  transform: translateY(-1px);
+}
 
 .notificationContainer nav {
     margin-top: auto;
@@ -80,28 +110,45 @@
 }
 
 .notificationContainer nav ul li a {
-    background-color: rgb(189, 194, 194);
+    background-color: #DADADA;
     text-decoration: none;
     border-radius: 8px;
     
 }
 
 .notifications-link {
-  background-color: #e0e7ef;
-  color: #1e293b;
+  color: #2E2E2E;
   text-decoration: none;
   border-radius: 8px;
   padding: 14px 212px;
   font-weight: 500;
   font-size: 18px;
-  font-family: 'Spline Sans', sans-serif;
   transition: background 0.3s ease, color 0.3s ease;
   display: inline-block;
+  position: relative;
+  overflow: hidden;
 }
 
-.notificationContainer nav ul li a.active,
-.notificationContainer nav ul li a:hover {
+.notifications-link:hover {
   background: #cfd0d1;
-  color: #eb2525;
-
+  color: #A61C1C;
+  box-shadow: 0 4px 10px rgba(166, 28, 28, 0.2);
+  transform: translateY(-2px);
 }
+
+.notificationContainer nav ul li a::after{
+  content: "";
+  position: absolute;
+  left: -75%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.notificationContainer nav ul li a:hover::after{
+  left: 130%;
+}
+
