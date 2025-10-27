@@ -1,9 +1,9 @@
 import Notification from "../Notifications/Notification";
-import useRequestHook  from "../../hooks/requestHook"
+import useRequestNotificationsHook  from "../../hooks/useRequestNotificationsHook"
 import "./NotificationsList.css"
 
 export default function NotificationsList() {
-    const { requests } = useRequestHook();
+    const { requests } = useRequestNotificationsHook();
 
     if(!requests || requests.length == 0){
         return(

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaHome, FaCalendarAlt, FaExchangeAlt, FaTrafficLight, FaUser } from "react-icons/fa";
+import { FaHome, FaCalendarAlt, FaExchangeAlt, FaTrafficLight, FaUser,  FaChartBar  } from "react-icons/fa";
 import "./SideBar.css";
 import { userHook } from "../../hooks/userHook"
 
@@ -54,6 +54,14 @@ export default function SideBar() {
               <span>Basic Information</span>
             </Link>
           </li>
+          { isAdmin ? (
+            <li>
+              <Link  to="/statistic" className="sidebar-link">
+               <FaChartBar className="sidebar-icon" />
+               <span> Statistics </span>
+              </Link>
+            </li>
+          ) : null}
         </ul>
       </nav>
     </aside>

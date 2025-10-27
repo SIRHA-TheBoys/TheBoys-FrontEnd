@@ -4,7 +4,7 @@ import { FaClock, FaCheck, FaRegTimesCircle } from "react-icons/fa";
 
 
 interface Props {
-    groupDestinyId: String;
+    groupDestinyId?: String;
     state: "PENDIENT" | "APPROVED" | "REJECTED" | "INPROGRESS";
 }
 
