@@ -44,7 +44,8 @@ export default function RequestTable() {
                 </span>
               </td>
               <td>
-                <button className="details-button">View details</button>
+                <button className="details-button" 
+                    onClick={() => navigate(`/requests/${req.id}`)}>View details</button>
               </td>
             </tr>
           ))}

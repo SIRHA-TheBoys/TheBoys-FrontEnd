@@ -17,8 +17,8 @@ function App() {
         <Route path="/requests" element={<Request />} />
         <Route path="/basicInformation" element={<BasicInformation />} />
         <Route path="/academicTrafficLight" element={<AcademicTrafficLight />} />
-        <Route path="/requestStatistics" element={<RequestStatistics />} />
-
+        <Route path="/requestStatistics" element={<RequestStatistics /> } />
+        <Route path="/requests/:id" element={<RequestDescription />} />
       </Routes>
     </Router>
   );
