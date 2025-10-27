@@ -12,10 +12,14 @@ export default function useRequestHook() {
         fetch(`http://localhost:8080/requests/${user.id}`)
             .then(res => res.json())
             .then(response => {
-                const requests = response
-                setRequest(requests)
+                if (Array.isArray(response)) {
+                    setRequest(response as Request[]);
+                } else {
+                    console.warn("Unexpected response for requests", response);
+                    setRequest([]);
+                }
             })
-            .catch(error => console.error("Error fectching schedule:", error))
+            .catch(error => console.error("Error fectching requests:", error))
     }, [user?.id])
     return { requests };
 }

@@ -1,4 +1,4 @@
-import Notifications from "../../components/Notifications/Notifications";
+import NotificationsList from "../NotificationsList/NotificationsList";
 import {FaUser, FaCalendarAlt, FaExchangeAlt, FaTrafficLight} from "react-icons/fa";
 import { Link } from "react-router-dom"
 import { userHook } from "../../hooks/userHook"
@@ -47,8 +47,7 @@ export default function HomeComponent (){
         </div>
         <div className="notificationContainer">
           <h2>Notifications</h2>
-          
-          <Notifications/>
+          <NotificationsList/>
           <nav>
             <ul>
               <li>
