@@ -1,9 +1,14 @@
 import logoSirha from "../../assets/logo-sirha.jpg";
 import logoEci from "../../assets/logo-eci.png";
 import { loginHook } from "../../hooks/loginHook";
+import "./Form.css"
+import { GoogleLoginButton } from "../GoogleLoginButton/GoogleLoginButton";
 export default function Form() {
 
   const { email, password, setEmail, setPassword, handleLogin } = loginHook();
+  const handleGoogleUser = (userData: any) => {
+    console.log('Usuario logueado con Google:', userData)
+  }
 
   return (
     <div className="login-form-container">
@@ -29,8 +34,11 @@ export default function Form() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign in</button>
+        <button className = "signInButton" type="submit">Sign in</button>
       </form>
+
+      <GoogleLoginButton onLoginSuccess={handleGoogleUser} />
+
       <div className="eci-logo">
         <img src={logoEci} alt="Escuela Colombiana de Ingeniería" />
       </div>

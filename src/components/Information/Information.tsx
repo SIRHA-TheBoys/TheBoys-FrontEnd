@@ -6,23 +6,27 @@ export default function information(user : User){
             <form className="profile-form">
                 <label>
                 Name
-                <input type="text" defaultValue={user?.name} />
+                <input type="text" value={user?.name} readOnly aria-readonly="true"/>
                 </label>
                 <label>
                 Identification
-                <input type="text" defaultValue={user?.id} />
+                <input type="text" value={user?.id} readOnly aria-readonly="true" />
+                </label>
+                <label>
+                Email
+                <input type="text" value={user?.email} readOnly aria-readonly="true" />
                 </label>
                 <label>
                 Role
-                <input type="text" defaultValue={user?.role.toLowerCase()} />
+                <input type="text" value={user?.role.toLowerCase()} readOnly aria-readonly="true" />
                 </label>
                 <label>
                 Career
-                <input type="text" defaultValue={user.career} />
+                <input type="text" value={user.career?.toLowerCase()} readOnly aria-readonly="true"/>
                 </label>
                 <label>
                 Semester
-                <input type="text" defaultValue= {user.semester}/>
+                <input type="text" value= {user.semester} readOnly aria-readonly="true"/>
                 </label>
           </form>
             );
@@ -31,15 +35,19 @@ export default function information(user : User){
             <form className="profile-form">
                 <label>
                 Name
-                <input type="text" defaultValue={user?.name} />
+                <input type="text" value={user?.name} readOnly aria-readonly="true"/>
                 </label>
                 <label>
                 Identification
-                <input type="text" defaultValue={user?.id} />
+                <input type="text" value={user?.id} readOnly aria-readonly="true"/>
+                </label>
+                <label>
+                Email
+                <input type="text" value={user?.email} readOnly aria-readonly="true" />
                 </label>
                 <label>
                 Role
-                <input type="text" defaultValue={user?.role.toLowerCase()} />
+                <input type="text" value={user?.role.toLowerCase()} readOnly aria-readonly="true"/>
                 </label>
           </form>
             );
@@ -48,23 +56,29 @@ export default function information(user : User){
             <form className="profile-form">
                 <label>
                 Name
-                <input type="text" defaultValue={user?.name} />
+                <input type="text" value={user?.name} readOnly aria-readonly="true"/>
                 </label>
                 <label>
                 Identification
-                <input type="text" defaultValue={user?.id} />
+                <input type="text" value={user?.id} readOnly aria-readonly="true"/>
                 </label>
+                
+                <label>
+                Email
+                <input type="text" value={user?.email} readOnly aria-readonly="true" />
+                </label>
+
                 <label>
                 Role
-                <input type="text" defaultValue={user?.role.toLowerCase()} />
+                <input type="text" value={user?.role.toLowerCase()} readOnly aria-readonly="true"/>
                 </label>
                 <label>
                 Career
-                <input type="text" defaultValue={user.career} />
+                <input type="text" value={user.career?.toLowerCase()} readOnly aria-readonly="true"/>
                 </label>
                 <label>
                 Semester
-                <input type="text" defaultValue= {user.semester}/>
+                <input type="text" value= {user.semester} readOnly aria-readonly="true"/>
                 </label>
           </form>
             );

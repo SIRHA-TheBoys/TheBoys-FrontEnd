@@ -1,15 +1,11 @@
-import Notifications from "../../components/Notifications/Notifications";
 import "./Home.css";
-import SideBar from "../../components/SideBar/SideBar";
 import TopBar from "../../components/TopBar/TopBar";
+import HomeComponent from "../../components/HomeComponent/HomeComponent"
 export default function Home() {
   return (
     <div>
       <TopBar />
-      <SideBar />
-      <div className="home">
-        <Notifications />
-      </div>
+      <HomeComponent />
     </div>
   );
 }
