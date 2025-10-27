@@ -56,7 +56,7 @@ export default function SideBar() {
           </li>
           { isAdmin ? (
             <li>
-              <Link  to="/statistic" className="sidebar-link">
+              <Link  to="/requestStatistics" className="sidebar-link">
                <FaChartBar className="sidebar-icon" />
                <span> Statistics </span>
               </Link>
