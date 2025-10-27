@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Group } from "../types/group"
-import { userHook } from "./userHook";
+import { Group } from "../../types/group"
+import { userHook } from "../usersHook/userHook";
 
 export default function useScheduleHook() {
 

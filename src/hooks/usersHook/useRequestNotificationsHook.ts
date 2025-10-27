@@ -1,5 +1,5 @@
 import { userHook } from "./userHook";
-import { Request } from "../types/request"
+import { Request } from "../../types/request"
 import { useState, useEffect } from "react"
 
 export default function useRequestHook() {

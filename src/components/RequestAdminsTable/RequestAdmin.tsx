@@ -1,7 +1,7 @@
 import "./RequestAdmin.css";
-import { userHook } from "../../hooks/userHook"
+import { userHook } from "../../hooks/usersHook/userHook"
 import { formatDateToLocal } from "../../lib/dateHelpers";
-import useRequestHook from "../../hooks/useRequestNotificationsHook";
+import useRequestHook from "../../hooks/usersHook/useRequestNotificationsHook";
 
 export default function RequestAdmin() {
   const { requests } = useRequestHook(); // Request dado un estudiante

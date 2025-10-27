@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { userHook } from "./userHook";
-import { Request } from "../types/request";
+import { Request } from "../../types/request";
 
 interface UseRequestsResult {
     requests: Request[];

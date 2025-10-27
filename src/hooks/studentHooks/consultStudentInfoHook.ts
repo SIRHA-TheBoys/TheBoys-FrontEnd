@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { User } from "../types/user";
+import { User } from "../../types/user";
 
 export default function useConsultStudentInfoHook(studentId: string) {
     const [student, setStudent] = useState<User | null>(null);

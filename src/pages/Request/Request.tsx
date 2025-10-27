@@ -3,7 +3,7 @@ import SideBar from "../../components/SideBar/SideBar";
 import TopBar from "../../components/TopBar/TopBar";
 import PopUpRequest from "../../components/PopUpRequest/PopUpRequest";
 import RequestTable from "../../components/RequestTable/RequestTable";
-import { userHook } from "../../hooks/userHook";
+import { userHook } from "../../hooks/usersHook/userHook";
 
 export default function Request() {
 

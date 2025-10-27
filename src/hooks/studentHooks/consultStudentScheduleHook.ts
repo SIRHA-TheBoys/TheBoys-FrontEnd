@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Group } from "../types/group"
+import { Group } from "../../types/group"
 
 export interface StudentProps {
     studentId: string

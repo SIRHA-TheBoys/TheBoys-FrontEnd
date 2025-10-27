@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import "./ScheduleTable.css";
-import useScheduleHook from "../../hooks/scheduleHook";
-import subjectHook from "../../hooks/subjectHook";
+import useScheduleHook from "../../hooks/schedulesHook/scheduleHook";
+import subjectHook from "../../hooks/studentHooks/subjectHook";
 import { DAYS } from "../../lib/schedule/constants";
 import { groupScheduleByDay } from "../../lib/schedule/buildMatrix";
 import { getSubjectColor } from "../../lib/schedule/helpers";

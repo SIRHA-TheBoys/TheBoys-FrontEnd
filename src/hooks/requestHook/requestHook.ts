@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { userHook } from "./userHook"
-import useScheduleHook from "./scheduleHook"
+import { userHook } from "../usersHook/userHook"
+import useScheduleHook from "../schedulesHook/scheduleHook"
 
 export default function useRequestHook() {
 

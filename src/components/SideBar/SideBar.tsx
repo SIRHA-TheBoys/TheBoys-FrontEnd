@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaHome, FaCalendarAlt, FaExchangeAlt, FaTrafficLight, FaUser,  FaChartBar  } from "react-icons/fa";
 import "./SideBar.css";
-import { userHook } from "../../hooks/userHook"
+import { userHook } from "../../hooks/usersHook/userHook"
 
 
 

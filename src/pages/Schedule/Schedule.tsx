@@ -4,8 +4,8 @@ import ScheduleTable from "../../components/ScheduleTable/ScheduleTable";
 import SelectSemester from "../../components/SelectSemester/SelectSemester";
 import SideBar from "../../components/SideBar/SideBar";
 import TopBar from "../../components/TopBar/TopBar";
-import { userHook } from "../../hooks/userHook"
-import useConsultStudentScheduleHook from "../../hooks/consultStudentScheduleHook";
+import { userHook } from "../../hooks/usersHook/userHook"
+import useConsultStudentScheduleHook from "../../hooks/studentHooks/consultStudentScheduleHook";
 
 import "./Schedule.css";
 
