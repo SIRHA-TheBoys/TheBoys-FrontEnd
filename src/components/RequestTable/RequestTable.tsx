@@ -1,11 +1,12 @@
 import useRequestNotification from "../../hooks/useRequestNotificationsHook"
 import "./RequestTable.css";
 import { userHook } from "../../hooks/userHook"
+import { useNavigate } from "react-router-dom";
 
 export default function RequestTable() {
   const { requests } = useRequestNotification();
   const { user } = userHook();
-  
+  const navigate = useNavigate();
 
   if(!user || !requests) {
     return <div className="requestTableContainer">Cargando...</div>;
@@ -44,7 +45,8 @@ export default function RequestTable() {
                 </span>
               </td>
               <td>
-                <button className="details-button">View details</button>
+                <button className="details-button" 
+                    onClick={() => navigate(`/requests/${req.id}`)}>View details</button>
               </td>
             </tr>
           ))}
