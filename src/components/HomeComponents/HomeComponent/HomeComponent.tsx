@@ -1,7 +1,7 @@
-import NotificationsList from "../NotificationsList/NotificationsList";
+import NotificationsList from "../../notificationsRequests/NotificationsList/NotificationsList";
 import {FaUser, FaCalendarAlt, FaExchangeAlt, FaTrafficLight, FaChartBar} from "react-icons/fa";
 import { Link } from "react-router-dom"
-import { userHook } from "../../hooks/usersHook/userHook"
+import { userHook } from "../../../hooks/usersHook/userHook"
 
 export default function HomeComponent (){
 

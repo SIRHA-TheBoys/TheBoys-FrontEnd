@@ -1,6 +1,6 @@
-import logoSirha from "../../assets/logo-sirha.jpg";
-import logoEci from "../../assets/logo-eci.png";
-import { loginHook } from "../../hooks/loginHook";
+import logoSirha from "../../../assets/logo-sirha.jpg";
+import logoEci from "../../../assets/logo-eci.png";
+import { loginHook } from "../../../hooks/LoginHook/loginHook";
 import "./Form.css"
 import { GoogleLoginButton } from "../GoogleLoginButton/GoogleLoginButton";
 export default function Form() {

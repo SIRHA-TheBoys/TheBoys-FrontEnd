@@ -10,8 +10,8 @@ import {
   BarElement,
 } from "chart.js";
 import "./RequestStatistics.css";
-import SideBar from "../../components/SideBar/SideBar";
-import TopBar from "../../components/TopBar/TopBar";
+import SideBar from "../../components/Layouts/SideBar/SideBar";
+import TopBar from "../../components/Layouts/TopBar/TopBar";
 
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
 

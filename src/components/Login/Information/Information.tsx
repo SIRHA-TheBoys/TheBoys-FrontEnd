@@ -1,4 +1,4 @@
-import { User } from "../../types/user"
+import { User } from "../../../types/user"
 export default function information(user : User){
     switch (user.role){
         case 'STUDENT':

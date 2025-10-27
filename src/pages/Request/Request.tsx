@@ -1,8 +1,8 @@
 import "./Request.css";
-import SideBar from "../../components/SideBar/SideBar";
-import TopBar from "../../components/TopBar/TopBar";
-import PopUpRequest from "../../components/PopUpRequest/PopUpRequest";
-import RequestTable from "../../components/RequestTable/RequestTable";
+import SideBar from "../../components/Layouts/SideBar/SideBar";
+import TopBar from "../../components/Layouts/TopBar/TopBar";
+import PopUpRequest from "../../components/PopUps/PopUpRequest/PopUpRequest"
+import RequestTable from "../../components/Request/RequestTable/RequestTable";
 import { userHook } from "../../hooks/usersHook/userHook";
 
 export default function Request() {

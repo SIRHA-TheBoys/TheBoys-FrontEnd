@@ -1,5 +1,5 @@
-import SideBar from "../../components/SideBar/SideBar";
-import TopBar from "../../components/TopBar/TopBar";
+import SideBar from "../../components/Layouts/SideBar/SideBar";
+import TopBar from "../../components/Layouts/TopBar/TopBar";
 import "./RequestDescription.css";
 import { useNavigate } from "react-router-dom";
 

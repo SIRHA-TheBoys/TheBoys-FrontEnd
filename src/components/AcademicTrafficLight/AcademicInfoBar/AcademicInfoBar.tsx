@@ -1,5 +1,5 @@
 import "./AcademicInfoBar.css";
-import { User } from "../../types/user";
+import { User } from "../../../types/user";
 
 export default function AcademicInfoBar(user: Readonly<User>) {
   return (

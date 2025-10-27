@@ -1,4 +1,4 @@
-import useRequestNotificationsHook from "../../hooks/usersHook/useRequestNotificationsHook";
+import useRequestNotificationsHook from "../../../hooks/usersHook/useRequestNotificationsHook";
 import Notification from "../Notifications/Notification";
 import "./NotificationsList.css"
 

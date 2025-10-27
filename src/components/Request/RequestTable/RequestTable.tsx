@@ -1,5 +1,5 @@
-import useRequestsHook from "../../hooks/usersHook/useRequestsHook"
-import { formatDateToLocal } from "../../lib/dateHelpers";
+import useRequestsHook from "../../../hooks/usersHook/useRequestsHook"
+import { formatDateToLocal } from "../../../lib/dateHelpers";
 import "./RequestTable.css";
 import { useNavigate } from "react-router-dom";
 

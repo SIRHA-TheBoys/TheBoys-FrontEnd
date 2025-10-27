@@ -1,12 +1,12 @@
-import CourseCard from "../../components/CourseCard/CourseCard";
-import SideBar from "../../components/SideBar/SideBar";
-import AcademicInfoBar from "../../components/AcademicInfoBar/AcademicInfoBar";
-import TopBar from "../../components/TopBar/TopBar";
+import CourseCard from "../../components/AcademicTrafficLight/CourseCard/CourseCard";
+import SideBar from "../../components/Layouts/SideBar/SideBar";
+import AcademicInfoBar from "../../components/AcademicTrafficLight/AcademicInfoBar/AcademicInfoBar";
+import TopBar from "../../components/Layouts/TopBar/TopBar";
 import subjectHook from "../../hooks/studentHooks/subjectHook";
 import { Subject } from "../../types/subject";
 import "./AcademicTrafficLight.css";
 import { userHook } from "../../hooks/usersHook/userHook";
-import PopUpStudentID from "../../components/PopUpStudentID/PopUpStudentID";
+import PopUpStudentID from "../../components/PopUps/PopUpStudentID/PopUpStudentID";
 import useConsultStudentInfoHook from "../../hooks/studentHooks/consultStudentInfoHook";
 import { useState } from "react";
 

@@ -1,6 +1,6 @@
-import TopBar from "../../components/TopBar/TopBar";
-import SideBar from "../../components/SideBar/SideBar";
-import Information from "../../components/Information/Information";
+import TopBar from "../../components/Layouts/TopBar/TopBar";
+import SideBar from "../../components/Layouts/SideBar/SideBar";
+import Information from "../../components/Login/Information/Information";
 import "./BasicInformation.css";
 import { userHook } from "../../hooks/usersHook/userHook"
 

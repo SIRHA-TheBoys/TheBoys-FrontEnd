@@ -1,4 +1,4 @@
-import logoSirha from "../../assets/logo-sirha-no-font.png";
+import logoSirha from "../../../assets/logo-sirha-no-font.png";
 import "./TopBar.css";
 export default function TopBar() {
   return (
