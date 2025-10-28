@@ -12,10 +12,8 @@ export default function PopUpAnswerRequest({ request, open, setOpen }: Props) {
   const [message, setMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
-  if (!request) {
-    return null;
-  }
-
+  /* Always call hooks in the same order — move useEffect before any early return
+     so hook count doesn't change between renders when `request` toggles. */
   useEffect(() => {
     if (open) {
       const prev = document.body.style.overflow;
@@ -26,6 +24,10 @@ export default function PopUpAnswerRequest({ request, open, setOpen }: Props) {
     }
     return;
   }, [open]);
+
+  if (!request) {
+    return null;
+  }
 
   async function updateRequest(newState: string) {
     setLoading(true);

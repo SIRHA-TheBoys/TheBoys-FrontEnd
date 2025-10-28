@@ -20,9 +20,8 @@
 }
 
 .pageActions {
-  /* place actions in the content area, aligned to the right */
-  margin-left: 240px; /* account for sidebar */
-  margin-right: 24px;
+  margin-left: 240px;
+  margin-right: 80px;
   margin-top: 18px;
   display: flex;
   justify-content: flex-end;
@@ -31,22 +30,23 @@
 }
 
 .labelsCard {
-  max-width: 1100px;
-  margin: 36px auto 0; /* reduce top space so card appears above actions */
-  padding: 18px;
+  max-width: 820px;
+  margin-top: 150px;
+  margin-left: 325px;
+  padding: 14px;
   background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.05);
   border: 1px solid rgba(15, 23, 42, 0.04);
   position: relative;
-  z-index: 5; /* ensure it sits above floated elements if any */
+  z-index: 5;
 }
 
 .requestDescriptionContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 18px;
+  gap: 20px;
+  padding: 12px 10px;
   font-family: "Spline Sans", sans-serif;
 }
 
@@ -62,7 +62,6 @@
   margin-bottom: 6px;
 }
 
-/* Elegant box that groups a label and its value. Reusable across the page. */
 .label-box {
   background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
   border: 1px solid rgba(15, 23, 42, 0.04);
@@ -80,7 +79,6 @@
   outline: none;
 }
 
-/* Value inside the box */
 .valueBox {
   font-size: 15px;
   color: #0f172a;
@@ -99,7 +97,6 @@
   color: #374151;
 }
 
-/* Responsive: stack into 1 column on small screens */
 @media (max-width: 900px) {
   .requestDescriptionContainer {
     grid-template-columns: 1fr;
