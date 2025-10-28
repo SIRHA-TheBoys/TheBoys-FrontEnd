@@ -18,9 +18,7 @@ Este proyecto corresponde al desarrollo de la interfaz gráfica del sistema **SI
 
 - Para mantener un control claro del desarrollo, seguimos una estructura de ramas basada en Git Flow:
 
-  - `main`: Contiene el código estable y listo para producción.
-  - `develop`: Rama principal de desarrollo.
-  - `feature/<funcionalidadRealizada>`: Se crea a partir de develop para implementar una nueva característica o mejora.
+Implementamos una estrategia de ramificación basada en Git Flow, utilizando las ramas main para producción y develop para integración, complementadas con ramas feature para nuevas funcionalidades, posteriormente las ramas feature se eliminan para generar un mejor flujo y no generar ruido en nuestro repostorio.
 
 ---
 
@@ -32,7 +30,7 @@ A continuación se presentan los mockups de las diferentes vistas del sistema.
 
 🔗 https://www.figma.com/design/5FjLUpjz4JK90ODnYmOWz6/SIRHA?node-id=0-1&t=5uAXr3i0gTXRMYzx-1
 
-![Mockup Vista de Usuarios](/docs/mockups/vista_usuarios.png)
+![Mockup Vista de Usuarios](/docs/mockups/LOGINMOCK.png)
 
 ---
 
@@ -49,6 +47,10 @@ A continuación se presentan los mockups de las diferentes vistas del sistema.
 ### 📊 Vista de Reportes
 
 ![Mockup Vista de Reportes](/docs/mockups/vista_reportes.png)
+### Vista de Semaforo plan de estudio
+![Mockup Semaforo](/docs/mockups/PLANMOCK.png)
+### Vista de horario semanal.
+![Mockup Horario](/docs/mockups/HORARIOMOCK.png)
 
 ---
 ### Diagramas de flujo de pantallas
