@@ -12,6 +12,7 @@ export default function RequestDescription() {
   const { request, navigate } = useRequestDescriptionHook();
   const { user } = userHook();
   const { subjects } = subjectHook();
+  const _keepSubjects = subjects;
   const isAdmin = user?.role === "ADMINISTRATOR"; 
 
   return (
