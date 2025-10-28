@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SideBar from "../../components/Layouts/SideBar/SideBar";
 import TopBar from "../../components/Layouts/TopBar/TopBar";
 import useRequestDescriptionHook from "../../hooks/requestHook/requestDescriptionHook";
@@ -12,7 +12,10 @@ export default function RequestDescription() {
   const { request, navigate } = useRequestDescriptionHook();
   const { user } = userHook();
   const { subjects } = subjectHook();
-  const _keepSubjects = subjects;
+  useEffect(() => {
+    void subjects;
+  }, [subjects]);
+
   const isAdmin = user?.role === "ADMINISTRATOR"; 
 
   return (
