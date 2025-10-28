@@ -76,9 +76,7 @@
     padding: 0;    
 }
 
-.user-menu li {
-    padding: 0 0px;
-}
+
 
 .user-menu ul li a {
     color: #2E2E2E;
@@ -99,8 +97,3 @@
     box-shadow: 0 2px 4px rgba(51, 43, 43, 0.1);
 
 }
-
-
-
-
-
