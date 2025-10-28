@@ -1,5 +1,14 @@
+export const normalizeISODate = (isoDate: string): string => {
+    if (!isoDate.endsWith('Z') && !isoDate.includes('+') && !isoDate.includes('-', 10)) {
+        return isoDate + 'Z';
+    }
+    return isoDate;
+};
+
 export const formatTime = (isoDate: string): string => {
     const date = new Date(isoDate);
+    date.setHours(date.getHours() + 5);
+
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const ampm = hours >= 12 ? 'PM' : 'AM';

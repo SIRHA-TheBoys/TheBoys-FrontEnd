@@ -5,7 +5,8 @@ import Request from "./pages/Request/Request";
 import AcademicTrafficLight from "./pages/AcademicTrafficLight/AcademicTrafficLight";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BasicInformation from "./pages/BasicInformation/BasicInformation";
-import Statistic from "./pages/Statistic/Statistic";
+import RequestStatistics from "./pages/RequestStatistics/RequestStatistics";
+import RequestDescription from "./pages/RequestDescription/RequestDescription";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path="/requests" element={<Request />} />
         <Route path="/basicInformation" element={<BasicInformation />} />
         <Route path="/academicTrafficLight" element={<AcademicTrafficLight />} />
-        <Route path="/statistic" element={<Statistic /> } />
+        <Route path="/requestStatistics" element={<RequestStatistics /> } />
+        <Route path="/requests/:id" element={<RequestDescription />} />
       </Routes>
     </Router>
   );

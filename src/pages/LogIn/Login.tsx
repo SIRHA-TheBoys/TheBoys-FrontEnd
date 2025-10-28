@@ -1,6 +1,6 @@
 import "./Login.css";
 import campus from "../../assets/eci-campus.png";
-import Form from "../../components/Form/Form";
+import Form from "../../components/Login/Form/Form";
 
 function Login() {
   return (
