@@ -19,25 +19,9 @@ export default function RequestDescription() {
       <TopBar />
       <SideBar />
 
-      <div>
-        <button
-          className="buttonBackToRequest"
-          onClick={() => navigate(`/requests/`)}
-        >
-          Button Back to Requests
-        </button>
-
-        {isAdmin && (
-          <>
-            <button className="buttonRespondRequest" onClick={() => setOpenAnswerPopup(true)}>
-              Request Response
-            </button>
-            <PopUpAnswerRequest request={request} open={openAnswerPopup} setOpen={setOpenAnswerPopup} />
-          </>
-        )}
-
-        <div className="labelsCard">
-          <div className="requestDescriptionContainer">
+        <div>
+          <div className="labelsCard">
+            <div className="requestDescriptionContainer">
 
           <div className="actualGroup">
             <div className="label-box" role="group" aria-label="Actual Group">
@@ -86,8 +70,26 @@ export default function RequestDescription() {
               </div>
           </div>
 
+            </div>
           </div>
-        </div>
+
+          <div className="pageActions">
+            <button
+              className="buttonBackToRequest"
+              onClick={() => navigate(`/requests/`)}
+            >
+              Button Back to Requests
+            </button>
+
+            {isAdmin && (
+              <>
+                <button className="buttonRespondRequest" onClick={() => setOpenAnswerPopup(true)}>
+                  Request Response
+                </button>
+                <PopUpAnswerRequest request={request} open={openAnswerPopup} setOpen={setOpenAnswerPopup} />
+              </>
+            )}
+          </div>
       </div>
     </div>
   );

@@ -1,36 +1,45 @@
 .buttonBackToRequest {
-    background: #861b1b;
-    color: white;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 500px;  
-    float: right;
-    margin-right: 40px;
+  background: #861b1b;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0;
 }
 .buttonRespondRequest {
-    background: #1b8634;
-    color: white;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 500px;  
-    float: right;
-    margin-right: 40px;
+  background: #1b8634;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.pageActions {
+  /* place actions in the content area, aligned to the right */
+  margin-left: 240px; /* account for sidebar */
+  margin-right: 24px;
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  align-items: center;
 }
 
 .labelsCard {
   max-width: 1100px;
-  margin: 120px auto 0;
+  margin: 36px auto 0; /* reduce top space so card appears above actions */
   padding: 18px;
   background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(2,6,23,0.06);
   border: 1px solid rgba(15, 23, 42, 0.04);
+  position: relative;
+  z-index: 5; /* ensure it sits above floated elements if any */
 }
 
 .requestDescriptionContainer {
