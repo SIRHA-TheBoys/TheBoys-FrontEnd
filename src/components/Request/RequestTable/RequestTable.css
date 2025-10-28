@@ -81,7 +81,6 @@
 
 .details-button:hover {
   color: #0d47a1;
-<<<<<<< HEAD:src/components/RequestTable/RequestTable.css
 }
 
 @keyframes fadeInUp {
@@ -94,6 +93,3 @@
     transform: translateY(0);
   }
 }
-=======
-}
->>>>>>> a6b8197f4eba0b34ef84da85f259ca098083a6b8:src/components/Request/RequestTable/RequestTable.css
