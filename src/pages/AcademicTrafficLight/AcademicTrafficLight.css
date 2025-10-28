@@ -7,6 +7,7 @@
 .main {
   display: flex;
   flex: 1;
+  
 }
 
 /* Sidebarfijo */
@@ -33,6 +34,7 @@
   overflow-x: hidden;
   display: block;
   /* evita que el flex limite el tamaño */
+  animation: fadeInUp 0.5s ease forwards;
 }
 
 body {

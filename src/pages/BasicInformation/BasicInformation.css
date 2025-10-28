@@ -1,7 +1,7 @@
 .main-content {
   margin-top: 60px;
   margin-left: 240px;  
-  padding: 24px;
+  padding: 32px;
   min-height: calc(100vh - 60px);
   box-sizing: border-box;
   background: #f4f1f1;
@@ -9,22 +9,26 @@
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap: 18px;
+  gap: 24px;
 
   color: #111827;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  transition: margin-left 0.3s ease;
 }
 
 .profile-title {
   width: 100%;
   max-width: 680px;
+  text-align: left;
 }
+
 .profile-title h1 {
   margin: 0 0 8px 0;
-  font-size: 22px;
+  font-size: 1.8rem;
   color: #111827;
   font-weight: 700;
 }
+
 .profile-title p {
   margin: 0;
   color: #6b7280;
@@ -39,12 +43,19 @@
   width: 100%;
   box-shadow: 0 1px 6px rgba(2,6,23,0.06);
   border: 1px solid rgba(2,6,23,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
 .profile-form { 
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
 }
 
 .profile-form label {
@@ -58,8 +69,8 @@
 .profile-form input,
 .profile-form textarea,
 .profile-form select {
-  margin-top: 6px;
-  padding: 10px 12px;
+  margin-top: 8px;
+  padding: 12px 14px;
   border: 1px solid #e6eef2;
   border-radius: 6px;
   background: #fff;
@@ -68,7 +79,7 @@
   font-size: 14px;
   color: #111827;
   outline: none;
-  transition: border-color 150ms ease, box-shadow 150ms ease;
+  transition: all 0.2s ease;
 }
 
 .profile-form input::placeholder,
@@ -89,7 +100,7 @@
   color: #6b7280;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .main-content {
     margin-left: 0;
     padding: 16px;
@@ -97,5 +108,24 @@
   .profile-card {
     max-width: 100%;
     padding: 20px;
+  }
+  .profile-title h1 {
+    font-size: 1.4rem;
+  }
+
+  .profile-title p {
+    font-size: 0.85rem;
+  }
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,4 +1,4 @@
-import logoSirha from "../../assets/logo-sirha-no-font.png";
+import  logoSirha  from "../../../assets/logo-sirha-no-font.png";
 import { FaUserCircle } from "react-icons/fa"
 import {Link} from "react-router-dom"
 import { useState, useEffect, useRef} from "react";
