@@ -11,6 +11,7 @@ export default function useRequestHook() {
   const [groupOriginId, setGroupOriginId] = useState("");
   const [groupDestinyId, setGroupDestinyId] = useState("");
   const { user } = userHook();
+  const [selectedSubjectId, setSelectedSubjectId] = useState("");
 
 
   async function handleOnSubmit() {
@@ -46,6 +47,6 @@ export default function useRequestHook() {
 
   }
 
-  return { handleOnSubmit, open, description, groups, showAlert, groupOriginId, groupDestinyId, user, setOpen, setDescription, setShowAlert, setGroupOriginId, setGroupDestinyId }
+  return { handleOnSubmit, open, description, groups, showAlert, groupOriginId, groupDestinyId, user, setOpen, setDescription, setShowAlert, setGroupOriginId, setGroupDestinyId, selectedSubjectId, setSelectedSubjectId }
 
 }

@@ -1,11 +1,14 @@
+import useRequestHook from "../../../hooks/usersHook/useRequestNotificationsHook";
+import { userHook } from "../../../hooks/usersHook/userHook";
+import { useNavigate } from "react-router-dom";
+import { formatDateToLocal } from "../../../lib/dateHelpers";
 import "./RequestAdmin.css";
-import { userHook } from "../../hooks/usersHook/userHook"
-import { formatDateToLocal } from "../../lib/dateHelpers";
-import useRequestHook from "../../hooks/usersHook/useRequestNotificationsHook";
+
 
 export default function RequestAdmin() {
   const { requests } = useRequestHook(); // Request dado un estudiante
   const { user } = userHook();
+  const navigate = useNavigate();
 
   if(!user || !requests) {
     return <div className="requestTableContainer">Cargando...</div>;
@@ -43,7 +46,12 @@ export default function RequestAdmin() {
                 </span>
               </td>
               <td>
-                <button className="details-button">View details</button>
+                <button
+                  className="details-button"
+                  onClick={() => navigate(`/requests/${req.id}`, { state: req })}
+                >
+                  View details
+                </button>
               </td>
             </tr>
           ))}

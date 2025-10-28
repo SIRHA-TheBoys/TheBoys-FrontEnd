@@ -3,7 +3,10 @@ import requestHook from "../../../hooks/requestHook/requestHook";
 
 export default function PopUpRequest() {
 
-  const {handleOnSubmit, open, description, groups, showAlert, groupOriginId, groupDestinyId, setOpen, setDescription, setGroupOriginId, setGroupDestinyId} = requestHook();
+  const {handleOnSubmit, open, description, groups,
+     showAlert, groupOriginId, groupDestinyId, 
+     setOpen, setDescription, setGroupOriginId, 
+     setGroupDestinyId} = requestHook();
 
   return (
     <>
@@ -78,7 +81,7 @@ export default function PopUpRequest() {
           </div>
         </div>
       )}
-      {showAlert && (<div className="alertRequest">La solicitud se ha enviado correctamente</div>
+      {showAlert && (<div className="alertRequest">The Request Has Been Send Correctly</div>
       )}
     </>
   );
