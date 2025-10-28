@@ -1,0 +1,142 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.login-page {
+  height: 100vh;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  background-color: #fff;
+  height: 60px;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.top-bar img {
+  height: 40px;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  width: 100%; 
+  height: 100vh;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login-image {
+  flex: 1;
+  height: 100%;
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.login-form-container {
+  flex: 1;
+  background-color: #f9fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4vw;
+  box-sizing: border-box;
+}
+
+.sirha-logo img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0c0c0c;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease, color 0.3s ease;
+}
+
+.login-form input:hover{
+  background-color: rgb(228, 233, 233);  
+}
+
+.login-form input:focus {
+  border-color: #A61C1C;
+  outline: none;
+}
+
+
+.eci-logo {
+  margin-top: 45px;
+}
+
+.eci-logo img {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image {
+    height: 40vh;
+  }
+
+  .login-form-container {
+    height: 60vh;
+    padding: 30px;
+  }
+}
