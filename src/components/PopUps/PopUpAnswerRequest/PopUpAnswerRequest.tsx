@@ -31,13 +31,17 @@ export default function PopUpAnswerRequest({ request, open, setOpen }: Props) {
     setLoading(true);
     try {
       const payload: any = {
-        ...request,
-        state: newState,
+        id: request.id,
+        userId: request.userId,
+        groupOriginId: request.groupOriginId,
+        groupDestinyId: request.groupDestinyId,
+        creationDate: request.creationDate,
         responseDate: new Date().toISOString(),
-        responseObservation: message,
+        description: request.description,
+        state: newState,
       };
 
-      const res = await fetch(`http://localhost:8080/requests/${request.userId}`, {
+      const res = await fetch(`http://localhost:8080/requests/requests/${request.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +75,6 @@ export default function PopUpAnswerRequest({ request, open, setOpen }: Props) {
             <p className="popUp-subtitle">Approve or Deny this request.</p>
 
             <div className="popUp-info">
-            
 
               <label>Group origin</label>
               <div className="popUp-value">{request.groupOriginId ?? "N/A"}</div>
@@ -82,15 +85,15 @@ export default function PopUpAnswerRequest({ request, open, setOpen }: Props) {
               <label>Observations</label>
               <div className="popUp-value descriptionBox">{request.description ?? "N/A"}</div>
 
-              <label>Responder (observations)</label>
+              <label>Respond (observations)</label>
               <textarea className="popUp-textarea" value={message} onChange={(e) => setMessage(e.target.value)} />
             </div>
 
             <div className="popUp-buttons">
-              <button className="cancel-button" disabled={loading} onClick={() => { updateRequest("DENIED"); }}>
+              <button className="cancel-button" disabled={loading} onClick={() => { updateRequest("REPROVED"); }}>
                 Deny
               </button>
-              <button className="send-button" disabled={loading} onClick={() => { updateRequest("ACCEPTED"); }}>
+              <button className="send-button" disabled={loading} onClick={() => { updateRequest("APPROVED"); }}>
                 {loading ? "Processing..." : "Accept"}
               </button>
             </div>
