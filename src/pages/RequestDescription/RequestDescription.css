@@ -10,13 +10,25 @@
     float: right;
     margin-right: 40px;
 }
+.buttonRespondRequest {
+    background: #1b8634;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 500px;  
+    float: right;
+    margin-right: 40px;
+}
 
 .requestDescriptionContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   padding: 30px;
-  margin-top: 150px;
+  margin-top: 180px;
   margin-left: 350px; 
   font-family: "Spline Sans", sans-serif;
 

@@ -1,0 +1,115 @@
+.popUp-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popUp-container {
+  background: #f2eae7;
+  border-radius: 16px;
+  padding: 30px 40px;
+  width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.2s ease-in-out;
+  font-family: "Spline Sans", sans-serif;
+
+}
+
+.popUp-title {
+  font-family: "Spline Sans", sans-serif;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.popUp-subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 25px;
+  font-family: "Spline Sans", sans-serif;
+
+}
+
+
+.alertRequest {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background-color: #2e7d32;
+  color: #fff;
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 500;
+  padding: 14px 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: alertSlide 0.4s ease forwards, alertFadeOut 0.4s ease 2.6s forwards;
+  z-index: 1000;
+}
+
+/* Alert*/
+@keyframes alertSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Alert*/
+@keyframes alertFadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+.popUp-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.popUp-value {
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 12px;
+}
+
+.popUp-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+/* Buttons inside popup */
+.cancel-button {
+  background: #c62828; /* red */
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.send-button {
+  background: #1b861b; /* green like before */
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
