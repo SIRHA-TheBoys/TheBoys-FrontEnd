@@ -36,46 +36,57 @@ export default function RequestDescription() {
           </>
         )}
 
-        <div className="requestDescriptionContainer">
+        <div className="labelsCard">
+          <div className="requestDescriptionContainer">
 
           <div className="actualGroup">
-            <label>Actual Group</label>
-            <div className="valueBox">{request?.groupOriginId || "N/A"}</div>
+            <div className="label-box" role="group" aria-label="Actual Group">
+              <label>Actual Group</label>
+              <div className="valueBox">{request?.groupOriginId || "N/A"}</div>
+            </div>
           </div>
 
           <div className="destinyGroup">
-            <label>Destiny Group</label>
-            <div className="valueBox">{request?.groupDestinyId || "N/A"}</div>
+            <div className="label-box" role="group" aria-label="Destiny Group">
+              <label>Destiny Group</label>
+              <div className="valueBox">{request?.groupDestinyId || "N/A"}</div>
+            </div>
           </div>
 
           <div className="academicPeriod">
-            <label>Academic Period</label>
-            <div className="valueBox">{request?.creationDate?.split("T")[0] || "N/A"}</div>
+            <div className="label-box" role="group" aria-label="Academic Period">
+              <label>Academic Period</label>
+              <div className="valueBox">{request?.creationDate?.split("T")[0] || "N/A"}</div>
+            </div>
           </div>
 
           <div className="currentState">
-            <label>Current State</label>
-            <div className="valueBox">{request?.state || "PENDING"}</div>
+            <div className="label-box" role="group" aria-label="Current State">
+              <label>Current State</label>
+              <div className="valueBox">{request?.state || "PENDING"}</div>
+            </div>
           </div>
 
           <div className="requestDescriptionDetails">
-            <label>Description</label>
-            <div className="valueBox descriptionBox">{request?.description ?? "No description"}</div>
+            <div className="label-box" role="group" aria-label="Description">
+              <label>Description</label>
+              <div className="valueBox descriptionBox">{request?.description ?? "No description"}</div>
+            </div>
           </div>
           <div className="requestMeta">
-              <label>Creation Date</label>
-              <div className="requestDescriptionValue">{request?.creationDate ?? "-"}</div>
+              <div className="label-box" role="group" aria-label="Creation Date">
+                <label>Creation Date</label>
+                <div className="requestDescriptionValue">{request?.creationDate ?? "-"}</div>
+              </div>
           </div>
           <div className="requestMeta">
-              <label>Response Date</label>
-              <div className="requestDescriptionValue">{request?.responseDate ?? "-"}</div>
-          </div>
-      
-          <div className="requestMeta">
-              <label>State</label>
-              <div className="requestDescriptionValue">{request?.state ?? "-"}</div>
+              <div className="label-box" role="group" aria-label="Response Date">
+                <label>Response Date</label>
+                <div className="requestDescriptionValue">{request?.responseDate ?? "-"}</div>
+              </div>
           </div>
 
+          </div>
         </div>
       </div>
     </div>
